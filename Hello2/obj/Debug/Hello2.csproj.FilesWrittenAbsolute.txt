@@ -1,0 +1,12 @@
+/Users/douglasl/projects/Hello2/Hello2/bin/Debug/Hello2.dll.mdb
+/Users/douglasl/projects/Hello2/Hello2/bin/Debug/Hello2.dll
+/Users/douglasl/projects/Hello2/Hello2/bin/Debug/Hello2.Hello2.apk
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/android/bin/Hello2.Hello2.apk
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/res/layout/main.axml
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/res/values/strings.xml
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/res/drawable/icon.png
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/R.cs.flag
+/Users/douglasl/projects/Hello2/Hello2/bin/Debug/Hello2.Hello2-Signed.apk
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/uploadflags.txt
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/Hello2.dll
+/Users/douglasl/projects/Hello2/Hello2/obj/Debug/Hello2.dll.mdb
