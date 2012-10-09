@@ -5,10 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B64822E7-7102-4ACA-A770-D6949CBD2D5A}</ProjectGuid>
+    <ProjectGuid>{F80E0C41-D782-4009-9E37-1A3EADF827FA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Hello2Tests</RootNamespace>
-    <AssemblyName>Hello2Tests</AssemblyName>
+    <RootNamespace>MVC</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AssemblyName>MVC</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -16,45 +18,24 @@
     <Optimize>False</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>True</Optimize>
     <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="Test.cs" />
-    <Compile Include="MVC\Mocks\MockApp.cs" />
-    <Compile Include="MVC\Mocks\MockAppSetup.cs" />
-    <Compile Include="MVC\Mocks\IMockService.cs" />
-    <Compile Include="MVC\Mocks\MockService.cs" />
-    <Compile Include="MVC\Mocks\MockController.cs" />
-    <Compile Include="MVC\MvcTests.cs" />
-    <Compile Include="MVC\Mocks\MockView1.cs" />
-    <Compile Include="MVC\Mocks\MockView2.cs" />
-    <Compile Include="MVC\Mocks\MockViewModel.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="MVC\" />
-    <Folder Include="MVC\Mocks\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utils.Raw\Utils.Raw.csproj">
-      <Project>{7895BBA6-9666-4E2A-B212-8BAB8A07A5BC}</Project>
-      <Name>Utils.Raw</Name>
-    </ProjectReference>
+    <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
 </Project>

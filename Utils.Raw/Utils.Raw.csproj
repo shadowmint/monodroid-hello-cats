@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B64822E7-7102-4ACA-A770-D6949CBD2D5A}</ProjectGuid>
+    <ProjectGuid>{7895BBA6-9666-4E2A-B212-8BAB8A07A5BC}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Hello2Tests</RootNamespace>
-    <AssemblyName>Hello2Tests</AssemblyName>
+    <RootNamespace>Utils.Raw</RootNamespace>
+    <AssemblyName>Utils.Raw</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -30,31 +30,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
-    <Compile Include="MVC\Mocks\MockApp.cs" />
-    <Compile Include="MVC\Mocks\MockAppSetup.cs" />
-    <Compile Include="MVC\Mocks\IMockService.cs" />
-    <Compile Include="MVC\Mocks\MockService.cs" />
-    <Compile Include="MVC\Mocks\MockController.cs" />
-    <Compile Include="MVC\MvcTests.cs" />
-    <Compile Include="MVC\Mocks\MockView1.cs" />
-    <Compile Include="MVC\Mocks\MockView2.cs" />
-    <Compile Include="MVC\Mocks\MockViewModel.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Infrastructure\MVC\IView.cs" />
+    <Compile Include="Infrastructure\MVC\IController.cs" />
+    <Compile Include="Infrastructure\MVC\Route.cs" />
+    <Compile Include="Infrastructure\MVC\AppControl.cs" />
+    <Compile Include="Infrastructure\MVC\AppControlFactory.cs" />
+    <Compile Include="Infrastructure\IOC\TinyIoC.cs" />
+    <Compile Include="Infrastructure\MVC\IAppSetup.cs" />
+    <Compile Include="Infrastructure\MVC\ActionResult.cs" />
+    <Compile Include="Infrastructure\MVC\IDispatcher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="MVC\" />
-    <Folder Include="MVC\Mocks\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utils.Raw\Utils.Raw.csproj">
-      <Project>{7895BBA6-9666-4E2A-B212-8BAB8A07A5BC}</Project>
-      <Name>Utils.Raw</Name>
-    </ProjectReference>
+    <Folder Include="Infrastructure\Impl\" />
   </ItemGroup>
 </Project>

@@ -5,16 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{07E340B6-1372-4ED6-86E0-224B136507FA}</ProjectGuid>
+    <ProjectGuid>{FB51E8C8-159B-4D3F-8A36-4224514F9814}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Hello2</RootNamespace>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <RootNamespace>Utils</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidApplication>True</AndroidApplication>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AssemblyName>Hello2</AssemblyName>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AssemblyName>Utils</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -43,36 +40,14 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="App\Controllers\HomeController.cs" />
-    <Compile Include="App\Views\Home\HelloWorld\HelloWorldActivity.cs" />
-    <Compile Include="App\Views\Home\HelloWorld\HelloWorldModel.cs" />
-    <Compile Include="App\App.cs" />
-    <Compile Include="App\AppSetup.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
-    <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\drawable\Icon.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="App\" />
-    <Folder Include="App\Controllers\" />
-    <Folder Include="App\Views\" />
-    <Folder Include="App\Views\Home\" />
-    <Folder Include="App\Views\Home\HelloWorld\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utils\Utils.Android.csproj">
-      <Project>{FB51E8C8-159B-4D3F-8A36-4224514F9814}</Project>
-      <Name>Utils.Android</Name>
-    </ProjectReference>
+    <Compile Include="Infrastructure\MVC\IView.cs" />
+    <Compile Include="Infrastructure\MVC\IController.cs" />
+    <Compile Include="Infrastructure\MVC\Route.cs" />
+    <Compile Include="Infrastructure\MVC\AppControl.cs" />
+    <Compile Include="Infrastructure\MVC\AppControlFactory.cs" />
+    <Compile Include="Infrastructure\IOC\TinyIoC.cs" />
+    <Compile Include="Infrastructure\MVC\IAppSetup.cs" />
   </ItemGroup>
 </Project>

@@ -5,10 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B64822E7-7102-4ACA-A770-D6949CBD2D5A}</ProjectGuid>
+    <ProjectGuid>{6DC93083-EB41-4BFE-B0A6-4BA8AE583CA5}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Hello2Tests</RootNamespace>
-    <AssemblyName>Hello2Tests</AssemblyName>
+    <RootNamespace>MVC2</RootNamespace>
+    <AssemblyName>MVC2</AssemblyName>
+    <TargetFrameworkProfile>Profile1</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -29,32 +32,7 @@
     <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <Private>False</Private>
-    </Reference>
+    <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Test.cs" />
-    <Compile Include="MVC\Mocks\MockApp.cs" />
-    <Compile Include="MVC\Mocks\MockAppSetup.cs" />
-    <Compile Include="MVC\Mocks\IMockService.cs" />
-    <Compile Include="MVC\Mocks\MockService.cs" />
-    <Compile Include="MVC\Mocks\MockController.cs" />
-    <Compile Include="MVC\MvcTests.cs" />
-    <Compile Include="MVC\Mocks\MockView1.cs" />
-    <Compile Include="MVC\Mocks\MockView2.cs" />
-    <Compile Include="MVC\Mocks\MockViewModel.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="MVC\" />
-    <Folder Include="MVC\Mocks\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utils.Raw\Utils.Raw.csproj">
-      <Project>{7895BBA6-9666-4E2A-B212-8BAB8A07A5BC}</Project>
-      <Name>Utils.Raw</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
