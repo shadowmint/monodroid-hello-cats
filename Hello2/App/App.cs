@@ -18,8 +18,8 @@ namespace Hello2
 		{
 			if (mvc == null) {
 				AppControlFactory.Register<IAppSetup>(new AppSetup());
-				mvc = AppControlFactory.Get();
-				mvc.C.Navigate("app.home.HelloWorld")
+				mvc = AppControlFactory.Resolve<AppControl>();
+				mvc.Navigate("app.home.HelloWorld");
 			}
 		}
 	}

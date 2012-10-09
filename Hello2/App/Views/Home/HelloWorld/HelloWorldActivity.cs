@@ -31,9 +31,6 @@ namespace Hello2
 				button.Text = string.Format ("{0} clicks!", count++);
 			};
 		}
-
-		public void Update(HelloWorldViewModel model) {
-		}
 	}
 }
 

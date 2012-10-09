@@ -1,1 +1,2 @@
 Hello2.Activity1;hello2.Activity1
+Hello2.App;hello2.App

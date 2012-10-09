@@ -51,14 +51,13 @@
     <Compile Include="App\Views\Home\HelloWorld\HelloWorldModel.cs" />
     <Compile Include="App\App.cs" />
     <Compile Include="Infrastructure\MVC\IController.cs" />
-    <Compile Include="Infrastructure\MVC\Controllers.cs" />
     <Compile Include="Infrastructure\MVC\Route.cs" />
     <Compile Include="Infrastructure\MVC\AppControl.cs" />
     <Compile Include="Infrastructure\IOC\TinyIoC.cs" />
     <Compile Include="Infrastructure\MVC\AppControlFactory.cs" />
     <Compile Include="Infrastructure\MVC\IAppSetup.cs" />
     <Compile Include="App\AppSetup.cs" />
-    <Compile Include="Infrastructure\MVC\DataActivity.cs" />
+    <Compile Include="Infrastructure\MVC\IView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

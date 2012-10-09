@@ -15,9 +15,9 @@ namespace Hello2
 		{
 		}
 
-		public void SetupControllers (Controllers controllers)
+		public void SetupControllers (AppControl app)
 		{
-			controllers.Attach(AppControlFactory.Resolve<HomeController>(), "app.home.{0}");
+			app.Attach(AppControlFactory.Resolve<HomeController>(), "app.home.{0}");
 		}
 	}
 }
