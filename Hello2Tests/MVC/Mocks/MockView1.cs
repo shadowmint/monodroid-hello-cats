@@ -7,8 +7,21 @@ namespace Hello2Tests.MVC.Mocks
 	{
 		public static string ID = "mock.view1";
 
-		public void SetModel (object model)
+		private MockViewModel _model;
+
+		public MockView1 ()
 		{
+			GetViewModel();
+		}
+
+		public void GetViewModel ()
+		{
+			_model = MockApp.mvc.ViewModel<MockViewModel>(new MockContext() { Value = "View1" });
+		}
+
+		public string Action ()
+		{
+			return _model.Name + " = " + _model.Value;
 		}
 	}
 }

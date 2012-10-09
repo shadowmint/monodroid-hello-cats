@@ -4,7 +4,7 @@ namespace Hello2.Infrastructure.MVC
 {
 	public interface IAppSetup
 	{
-		void SetupDependencies(AppControlFactory factory);
+		void SetupDependencies();
 		void SetupControllers(AppControl app);
 	}
 }

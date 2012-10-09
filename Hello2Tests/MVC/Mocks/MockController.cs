@@ -5,13 +5,32 @@ namespace Hello2Tests.MVC.Mocks
 {
 	public class MockController : IController 
 	{
+		private MockContext _mc;
+
+		public Object Context 
+		{
+			get 
+			{
+				return _mc;
+			}
+			set 
+			{
+				_mc = (MockContext) value;
+			}
+		}
+
+		public IControllerAction Navigate (string[] path)
+		{
+			throw new NotImplementedException ();
+		}
+
 		public ActionResult Hello1 ()
 		{
 			var model = new MockViewModel() {
 				Name = "View1",
 				Value = "Hello World"
 			};
-			return new ActionResult(MockView1.ID, model);
+			return new ActionResult(MockView1.ID, model, Context);
 		}
 
 		public ActionResult Hello2 ()
@@ -20,12 +39,7 @@ namespace Hello2Tests.MVC.Mocks
 				Name = "View2",
 				Value = "Hello World"
 			};
-			return new ActionResult(MockView2.ID, model);
-		}
-
-		public IControllerAction Navigate (string[] path)
-		{
-			return Hello1;
+			return new ActionResult(MockView2.ID, model, Context);
 		}
 	}
 }

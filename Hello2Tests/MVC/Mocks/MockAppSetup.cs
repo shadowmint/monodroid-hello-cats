@@ -12,7 +12,9 @@ namespace Hello2Tests.MVC.Mocks
 
 		public void SetupControllers (AppControl app)
 		{
-			app.Attach(AppControlFactory.Resolve<MockController>(), "app.home.{0}");
+			var c = (MockController) app.Controller(typeof(MockController));
+			app.Route(c, c.Hello1, MockView1.ID);
+			app.Route(c, c.Hello2, MockView2.ID);
 		}
 	}
 }

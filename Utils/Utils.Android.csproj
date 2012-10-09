@@ -49,5 +49,12 @@
     <Compile Include="Infrastructure\MVC\AppControlFactory.cs" />
     <Compile Include="Infrastructure\IOC\TinyIoC.cs" />
     <Compile Include="Infrastructure\MVC\IAppSetup.cs" />
+    <Compile Include="Infrastructure\MVC\ActionResult.cs" />
+    <Compile Include="Infrastructure\MVC\IDispatcher.cs" />
+    <Compile Include="Infrastructure\Impl\AndroidDispatcher.cs" />
+    <Compile Include="Infrastructure\Impl\AndroidModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastructure\Impl\" />
   </ItemGroup>
 </Project>

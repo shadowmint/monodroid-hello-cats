@@ -45,6 +45,7 @@
     <Compile Include="MVC\Mocks\MockView1.cs" />
     <Compile Include="MVC\Mocks\MockView2.cs" />
     <Compile Include="MVC\Mocks\MockViewModel.cs" />
+    <Compile Include="MVC\Mocks\MockContext.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

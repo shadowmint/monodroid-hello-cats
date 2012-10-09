@@ -11,6 +11,14 @@ namespace Hello2.Infrastructure.MVC
 			generic.Invoke(TinyIoCContainer.Current, new object[] { instance });
 		}
 
+		public static Object Resolve (Type t)
+		{
+			var method = TinyIoCContainer.Current.GetType().GetMethod ("Resolve");
+			var generic = method.MakeGenericMethod(t);
+			var result = generic.Invoke(TinyIoCContainer.Current, new object[] {});
+			return result;
+		}
+
 		public static T Resolve<T>() {
 			var method = TinyIoCContainer.Current.GetType().GetMethod ("Resolve");
 			var generic = method.MakeGenericMethod(typeof(T));

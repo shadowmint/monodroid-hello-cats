@@ -13,8 +13,8 @@ namespace Hello2
 			return "HelloWorld";
 		}
 
-		public string Navigate(string[] path) {
-			return "";
+		public IControllerAction Navigate(string[] path) {
+			return null;
 		}
 	}
 }

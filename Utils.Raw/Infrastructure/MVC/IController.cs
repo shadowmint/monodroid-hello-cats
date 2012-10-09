@@ -7,6 +7,8 @@ namespace Hello2.Infrastructure.MVC
 	public interface IController
 	{
 		IControllerAction Navigate(string[] path);
+
+		Object Context { get; set; }
 	}
 }
 

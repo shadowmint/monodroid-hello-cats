@@ -11,13 +11,13 @@ namespace Hello2
 {
 	public class AppSetup : IAppSetup 
 	{
-		public void SetupDependencies(AppControlFactory factory)
+		public void SetupDependencies()
 		{
 		}
 
 		public void SetupControllers (AppControl app)
 		{
-			app.Attach(AppControlFactory.Resolve<HomeController>(), "app.home.{0}");
+			//app.Attach(AppControlFactory.Resolve<HomeController>(), "app.home.{0}");
 		}
 	}
 }

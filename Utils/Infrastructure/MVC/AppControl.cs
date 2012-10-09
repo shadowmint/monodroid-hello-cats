@@ -1,27 +1,57 @@
 using System;
+using System.Collections.Generic;
 
 namespace Hello2.Infrastructure.MVC
 {
 	public class AppControl
 	{
-		/** 
-		 * Attach controllers using a path like "blah.blah.{0}"
-		 * <p>
-		 * Any controller can be bound multiple times to different generic routes.
-		 * When the controller is invoked for a path like "{0}.blah.{1}", the 
-		 * arguments passed to the controller are [{0}, {1}].
-		 */
-		public void Attach<T>(T controller, string path) where T : IController {
+		private IDictionary<string, Route> _routes = new Dictionary<string, Route>();
+
+		private IDictionary<Type, IController> _controllers = new Dictionary<Type, IController>();
+
+		private IDispatcher _dispatcher;
+
+		public AppControl (IDispatcher dispatcher)
+		{
+			_dispatcher = dispatcher;
 		}
-		
+
+		/** Get a specific controller */
+		private IController GetController (Type ctype)
+		{
+			if (!_controllers.ContainsKey (ctype)) {
+				var controller = (IController) AppControlFactory.Resolve (ctype);
+				_controllers.Add(ctype, controller);
+			}
+			return _controllers [ctype];
+		}
+
+		/** Bind an action to a named route */
+		public void Route (Type ctype, IControllerAction action, string path)
+		{
+			var controller = GetController(ctype);
+			var route = new Route() {
+				Path = path,
+				Controller = controller,
+				Action = action
+			};
+			_routes.Add(path, route);
+		}
+
 		/** Attempts to navigate to a new controller */
-		public void Navigate(string path) {
-			
-			// Find the controller, invoke the controller action
-			
-			// Check if we have a match for that activity already
-			
-			// If so, update that activity
+		public void Navigate (string path)
+		{
+			if (_routes.ContainsKey (path)) {
+				var route = _routes[path];
+				var action = route.Action();
+				_dispatcher.Dispatch(action);
+			}
+		}
+
+		/** Get the current view model from any context */
+		public T ViewModel<T> ()
+		{
+			return (T) _dispatcher.GetViewModel();
 		}
 	}
 }
