@@ -33,20 +33,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Infrastructure\MVC\IController.cs" />
-    <Compile Include="Infrastructure\MVC\Route.cs" />
-    <Compile Include="Infrastructure\MVC\AppControl.cs" />
-    <Compile Include="Infrastructure\MVC\AppControlFactory.cs" />
-    <Compile Include="Infrastructure\IOC\TinyIoC.cs" />
-    <Compile Include="Infrastructure\MVC\IAppSetup.cs" />
-    <Compile Include="Infrastructure\MVC\ActionResult.cs" />
-    <Compile Include="Infrastructure\MVC\IDispatcher.cs" />
-    <Compile Include="Infrastructure\Impl\TestDispatcher.cs" />
-    <Compile Include="Infrastructure\Impl\TestModule.cs" />
-    <Compile Include="Infrastructure\MVC\IView.cs" />
+    <Compile Include="MVC\Infrastructure\IOC\TinyIoC.cs" />
+    <Compile Include="MVC\Infrastructure\Impl\TestView.cs" />
+    <Compile Include="MVC\Infrastructure\IDispatcher.cs" />
+    <Compile Include="MVC\Infrastructure\IView.cs" />
+    <Compile Include="MVC\Infrastructure\Controller.cs" />
+    <Compile Include="MVC\Infrastructure\ISession.cs" />
+    <Compile Include="MVC\Infrastructure\Resolver.cs" />
+    <Compile Include="MVC\Infrastructure\Impl\TestDispatcher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Infrastructure\Impl\" />
+    <Folder Include="MVC\" />
   </ItemGroup>
 </Project>

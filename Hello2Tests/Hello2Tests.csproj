@@ -36,22 +36,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
-    <Compile Include="MVC\Mocks\MockApp.cs" />
-    <Compile Include="MVC\Mocks\MockAppSetup.cs" />
-    <Compile Include="MVC\Mocks\IMockService.cs" />
-    <Compile Include="MVC\Mocks\MockService.cs" />
-    <Compile Include="MVC\Mocks\MockController.cs" />
-    <Compile Include="MVC\MvcTests.cs" />
-    <Compile Include="MVC\Mocks\MockView1.cs" />
-    <Compile Include="MVC\Mocks\MockView2.cs" />
-    <Compile Include="MVC\Mocks\MockViewModel.cs" />
-    <Compile Include="MVC\Mocks\MockContext.cs" />
+    <Compile Include="Test\TestController.cs" />
+    <Compile Include="Test\TestAppState.cs" />
+    <Compile Include="Test\TestSession.cs" />
+    <Compile Include="Test\TestView1.cs" />
+    <Compile Include="Test\TestViewModel1.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="MVC\" />
-    <Folder Include="MVC\Mocks\" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Utils.Raw\Utils.Raw.csproj">
       <Project>{7895BBA6-9666-4E2A-B212-8BAB8A07A5BC}</Project>

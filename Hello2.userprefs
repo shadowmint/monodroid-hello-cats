@@ -1,3 +1,59 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.ItemProperties.Hello2 AndroidDeviceId-Debug="emulator-5554" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hello2Tests/MVC/Mocks/MockViewModel.cs">
+    <Files>
+      <File FileName="Hello2Tests/MVC/Mocks/IMockService.cs" Line="4" Column="9" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockService.cs" Line="4" Column="22" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockController.cs" Line="42" Column="56" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockApp.cs" Line="13" Column="5" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockAppSetup.cs" Line="22" Column="1" />
+      <File FileName="Utils.Raw/Infrastructure/MVC/AppControlFactory.cs" Line="11" Column="40" />
+      <File FileName="Hello2Tests/Test.cs" Line="7" Column="3" />
+      <File FileName="Utils.Raw/Infrastructure/MVC/IController.cs" Line="12" Column="2" />
+      <File FileName="Hello2Tests/MVC/MvcTests.cs" Line="15" Column="3" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockView1.cs" Line="19" Column="86" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockView2.cs" Line="29" Column="1" />
+      <File FileName="Utils.Raw/Infrastructure/MVC/ActionResult.cs" Line="13" Column="14" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockViewModel.cs" Line="9" Column="35" />
+      <File FileName="Utils.Raw/Infrastructure/MVC/AppControl.cs" Line="56" Column="33" />
+      <File FileName="Utils.Raw/Infrastructure/MVC/Route.cs" Line="11" Column="47" />
+      <File FileName="Utils.Raw/Infrastructure/Impl/TestDispatcher.cs" Line="15" Column="3" />
+      <File FileName="Utils.Raw/Infrastructure/MVC/IAppSetup.cs" Line="6" Column="2" />
+      <File FileName="Hello2Tests/MVC/Mocks/MockContext.cs" Line="12" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Hello2Tests" expanded="True" />
+          <Node name="Utils.Raw" expanded="True">
+            <Node name="MVC" expanded="True">
+              <Node name="Infrastructure" expanded="True">
+                <Node name="Impl" expanded="True" />
+                <Node name="IOC" expanded="True" />
+                <Node name="IView.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True">
+          <Node name="Hello2Tests" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

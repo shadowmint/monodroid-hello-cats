@@ -69,10 +69,4 @@
     <Folder Include="App\Views\Home\" />
     <Folder Include="App\Views\Home\HelloWorld\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utils\Utils.Android.csproj">
-      <Project>{FB51E8C8-159B-4D3F-8A36-4224514F9814}</Project>
-      <Name>Utils.Android</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

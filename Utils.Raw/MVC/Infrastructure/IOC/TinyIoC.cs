@@ -57,7 +57,7 @@
 #endif
 
 #endregion
-namespace Hello2.Infrastructure.IOC
+namespace MVC.Infrastructure.IOC
 {
 	using System;
 	using System.Collections.Generic;

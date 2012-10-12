@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using Hello2Tests.MVC.Mocks;
 
 namespace Hello2Tests
 {
