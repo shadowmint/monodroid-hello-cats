@@ -36,7 +36,7 @@ namespace Utils.Raw.Tests.MVC
 
 			Assert.IsNull(TestDispatcher.CurrentView, "View was set before a reques to set the view");
 			controller.JumpToOtherView();
-			Assert.IsNull(TestDispatcher.CurrentView, "View was not set after a request to set the view");
+			Assert.IsNotNull(TestDispatcher.CurrentView, "View was not set after a request to set the view");
 		}
 	}
 }
