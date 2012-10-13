@@ -1,18 +1,36 @@
 using System;
 using MVC.Infrastructure;
+using System.Collections.Generic;
 
 namespace Utils
 {
 	public class TestDispatcher : IDispatcher
 	{
-		public static object Model { get; set; }
+		private static IDictionary<string, TestView> _views = new Dictionary<string, TestView>();
 
-		public static Controller Controller { get; set; }
+		private Resolver _resolver = new Resolver();
 
-		public void Dispatch (string id, Controller controller, object model)
+		public static ViewData ViewData { get; private set; }
+
+		public static TestView CurrentView = null;
+
+		/** For testing, you must explicitly bind views to ids */
+		public static void Bind(string id, TestView instance)
 		{
-			Model = model;
-			Controller = controller;
+			_views[id] = instance;
+		}
+
+		public void Dispatch<T>(string id, object state) where T : Controller
+		{
+			var controller = (Controller)_resolver.Resolve<T>();
+			ViewData = new ViewData() {
+				State = state,
+				Controller = controller
+			};
+			if (!_views.ContainsKey(id)) {
+				throw new Exception("In testing you MUST manually register views to their ID's using TestDispatcher::Bind (missing id: " + id + ")");
+			}
+			CurrentView = _views[id];
 		}
 	}
 }

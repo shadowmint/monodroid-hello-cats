@@ -2,10 +2,10 @@ using System;
 
 namespace MVC.Infrastructure
 {
-	public interface ISession
+	public abstract class ISession
 	{
 		/** Return the global app state */
-		object _State { get; }
+		public abstract object State { get; }
 	}
 }
 

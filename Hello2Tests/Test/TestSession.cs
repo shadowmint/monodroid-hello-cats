@@ -7,14 +7,10 @@ namespace Utils.Raw.Tests
 	{
 		private TestAppState _instance = null;
 
-		public object _State 
-		{
-			get 
-			{
+		public override object State {
+			get {
 				if (_instance == null) 
-				{
-					_instance = new TestAppState ();
-				}
+					_instance = new TestAppState();
 				return _instance;
 			}
 		}

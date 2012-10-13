@@ -4,21 +4,19 @@ namespace MVC.Infrastructure
 {
 	public abstract class Controller
 	{
-		protected ISession _session { get; private set; } 
+		protected ISession Session { get; private set; }
 
 		private IDispatcher _dispatcher;
 
-		private Resolver _resolver;
-
-		public Controller (ISession session, IDispatcher dispatcher, Resolver resolver)
+		public Controller(ISession session, IDispatcher dispatcher)
 		{
 			_dispatcher = dispatcher;
-			_session = session;
-			_resolver = resolver;
+			Session = session;
 		}
 
-		protected void Navigate<T>(string id, object model) {
-			_dispatcher.Dispatch(id, this, model);
+		protected void Navigate<T>(string id, object model) where T : Controller
+		{
+			_dispatcher.Dispatch<T>(id, model);
 		}
 	}
 }

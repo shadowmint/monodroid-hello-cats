@@ -3,9 +3,9 @@ using MVC.Infrastructure;
 
 namespace Utils.Raw.Tests
 {
-	public class TestViewModel 
+	public class TestViewModel2 
 	{
-		public string Value { get; set; }
+		public string Value = "World";
 	}
 }
 

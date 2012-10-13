@@ -36,11 +36,12 @@
     <Compile Include="MVC\Infrastructure\IOC\TinyIoC.cs" />
     <Compile Include="MVC\Infrastructure\Impl\TestView.cs" />
     <Compile Include="MVC\Infrastructure\IDispatcher.cs" />
-    <Compile Include="MVC\Infrastructure\IView.cs" />
     <Compile Include="MVC\Infrastructure\Controller.cs" />
     <Compile Include="MVC\Infrastructure\ISession.cs" />
     <Compile Include="MVC\Infrastructure\Resolver.cs" />
     <Compile Include="MVC\Infrastructure\Impl\TestDispatcher.cs" />
+    <Compile Include="MVC\Infrastructure\View.cs" />
+    <Compile Include="MVC\Infrastructure\ViewData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

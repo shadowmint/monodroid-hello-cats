@@ -3,13 +3,13 @@ using MVC.Infrastructure;
 
 namespace Utils.Raw.Tests
 {
-	public class TestView1 : TestView
+	public class TestView2 : TestView
 	{
-		public const string ID = "VIEW1";
+		public const string ID = "VIEW2";
 
-		protected TestController1 Controller { 
+		protected TestController2 Controller { 
 			get {
-				return (TestController1)ViewData.Controller;
+				return (TestController2)ViewData.Controller;
 			}
 		}
 
@@ -26,7 +26,7 @@ namespace Utils.Raw.Tests
 			else 
 				Controller.SetValue("");
 		}
-
+		
 		public void FakeUserClickNav() {
 			Controller.JumpToOtherView();
 		}

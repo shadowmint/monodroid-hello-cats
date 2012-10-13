@@ -36,11 +36,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
-    <Compile Include="Test\TestController.cs" />
     <Compile Include="Test\TestAppState.cs" />
     <Compile Include="Test\TestSession.cs" />
     <Compile Include="Test\TestView1.cs" />
     <Compile Include="Test\TestViewModel1.cs" />
+    <Compile Include="Test\TestController1.cs" />
+    <Compile Include="Test\TestController2.cs" />
+    <Compile Include="Test\TestView2.cs" />
+    <Compile Include="MVC\TestMvcWorks.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -48,5 +51,8 @@
       <Project>{7895BBA6-9666-4E2A-B212-8BAB8A07A5BC}</Project>
       <Name>Utils.Raw</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MVC\" />
   </ItemGroup>
 </Project>

@@ -4,8 +4,8 @@ namespace MVC.Infrastructure
 {
 	public interface IDispatcher
 	{
-	    /** Request that a view be launched, passing it the controller and model */
-		void Dispatch(string id, Controller controller, object model);
+	    /** Request that a view be launched from controller T with the given model */
+		void Dispatch<T>(string id, object model) where T : Controller;
 	}
 }
 

@@ -3,22 +3,12 @@ using MVC.Infrastructure;
 
 namespace Utils
 {
-	public abstract class TestView : IView
+	public abstract class TestView : View
 	{
-		public Controller _Controller 
-		{ 
-			get 
-			{
-				return TestDispatcher.Controller;
+		protected override ViewData ViewData { 
+			get {
+				return TestDispatcher.ViewData;
 			}
-		}
-
-		public object _Model 
-		{ 
-			get 
-			{ 
-				return TestDispatcher.Model; 
-			} 
 		}
 	}
 }
