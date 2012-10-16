@@ -1,11 +1,12 @@
 using System;
 using MVC.Infrastructure;
+using Android.App;
 
 namespace MVC.Infrastructure.Impl
 {
-	public abstract class AndroidView : View
+	public abstract class AndroidView : Activity, IView
 	{
-		protected override ViewData ViewData { 
+		public ViewData ViewData { 
 			get {
 				return AndroidDispatcher.ViewData;
 			}

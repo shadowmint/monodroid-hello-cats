@@ -40,8 +40,8 @@
     <Compile Include="MVC\Infrastructure\ISession.cs" />
     <Compile Include="MVC\Infrastructure\Resolver.cs" />
     <Compile Include="MVC\Infrastructure\Impl\TestDispatcher.cs" />
-    <Compile Include="MVC\Infrastructure\View.cs" />
     <Compile Include="MVC\Infrastructure\ViewData.cs" />
+    <Compile Include="MVC\Infrastructure\IView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -47,9 +48,9 @@
     <Compile Include="MVC\Infrastructure\Controller.cs" />
     <Compile Include="MVC\Infrastructure\ISession.cs" />
     <Compile Include="MVC\Infrastructure\Resolver.cs" />
-    <Compile Include="MVC\Infrastructure\View.cs" />
     <Compile Include="MVC\Infrastructure\ViewData.cs" />
     <Compile Include="MVC\Infrastructure\Impl\AndroidDispatcher.cs" />
     <Compile Include="MVC\Infrastructure\Impl\AndroidView.cs" />
+    <Compile Include="MVC\Infrastructure\IView.cs" />
   </ItemGroup>
 </Project>

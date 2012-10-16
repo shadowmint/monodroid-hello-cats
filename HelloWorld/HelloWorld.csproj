@@ -52,6 +52,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Model\AppSession.cs" />
     <Compile Include="Model\AppModel.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

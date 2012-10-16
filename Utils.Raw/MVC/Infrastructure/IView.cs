@@ -2,10 +2,10 @@ using System;
 
 namespace MVC.Infrastructure
 {
-	public abstract class View
+	public interface IView
 	{
 		/** Return the data block for this view */
-		protected abstract ViewData ViewData { get; }
+		ViewData ViewData { get; }
 	}
 }
 

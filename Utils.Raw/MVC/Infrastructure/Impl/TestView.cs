@@ -3,9 +3,9 @@ using MVC.Infrastructure;
 
 namespace Utils
 {
-	public abstract class TestView : View
+	public abstract class TestView : IView
 	{
-		protected override ViewData ViewData { 
+		public ViewData ViewData { 
 			get {
 				return TestDispatcher.ViewData;
 			}

@@ -5,8 +5,14 @@ namespace HelloWorld.Model
 {
 	public class AppSession : ISession 
 	{
-		public AppSession ()
-		{
+		private static AppModel _instance = null;
+
+		public override object State {
+			get {
+				if (_instance == null)
+					_instance = new AppModel();
+				return _instance;
+			}
 		}
 	}
 }
