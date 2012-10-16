@@ -13,19 +13,22 @@ using HelloWorld.Controllers;
 
 namespace HelloWorld
 {
-	[Activity (Label = "Main", MainLauncher = true)]
-	public class MainActivity : Activity
+	[Activity (Label = "App", MainLauncher = true)]
+	public class App : Activity
 	{
+		public static AppSession Session = null;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			var r = new Resolver();
-			r.Bind<IDispatcher, AndroidDispatcher>();
-			r.Bind<ISession, AppSession>();
 
-			var home = r.Resolve<HomeController>();
-			home.Index();
+
+			/** Create global session instance */
+			var r = new Resolver();
+
+
+			Session.Controller<HomeController>().Index();
 		}
 	}
 }

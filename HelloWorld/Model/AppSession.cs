@@ -7,6 +7,13 @@ namespace HelloWorld.Model
 	{
 		private static AppModel _instance = null;
 
+		/** Bind various implementations */
+		public AppSession() {
+			var r = new Resolver();
+			r.Bind<IDispatcher, AndroidDispatcher>();
+			r.Bind<ISession, AppSession>();
+		}
+
 		public override object State {
 			get {
 				if (_instance == null)
