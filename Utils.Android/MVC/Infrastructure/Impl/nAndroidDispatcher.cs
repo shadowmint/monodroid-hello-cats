@@ -9,8 +9,8 @@ namespace MVC.Infrastructure.Impl
 	{
 		public void Dispatch (nView view)
 		{
-			var context = (Context) view.Action.Params[nAndroidView.CONTEXT];
-			var target = (Type) view.Action.Params[nAndroidView.TARGET];
+			Context context = (Context) view.Action.Params[nAndroidView.CONTEXT];
+			Type target = (Type) view.Action.Params[nAndroidView.TARGET];
 			var intent = new Intent(context, target);
 			context.StartActivity(intent);
 		}

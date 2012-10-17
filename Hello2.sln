@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils.Android", "Utils.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dfdf", "dfdf\dfdf.csproj", "{E6F16184-7CB2-4074-82A0-7C5D4BEF10A2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +19,6 @@ Global
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6F16184-7CB2-4074-82A0-7C5D4BEF10A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6F16184-7CB2-4074-82A0-7C5D4BEF10A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6F16184-7CB2-4074-82A0-7C5D4BEF10A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6F16184-7CB2-4074-82A0-7C5D4BEF10A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Utils.Android\Utils.Android.csproj

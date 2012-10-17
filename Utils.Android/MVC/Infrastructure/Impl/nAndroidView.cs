@@ -2,6 +2,7 @@ using System;
 using MVC.Infrastructure;
 using Android.App;
 using Android.Content;
+using System.Collections.Generic;
 
 namespace MVC.Infrastructure.Impl
 {
@@ -14,8 +15,10 @@ namespace MVC.Infrastructure.Impl
 		public nAndroidView(object model, Type target, Context context) {
 			Model = model;
 			Action = new nAction() {
-				{ TARGET, target },
-				{ CONTEXT, context }
+				Params = new Dictionary<string, object>() {
+					{ TARGET, target },
+					{ CONTEXT, context }
+				}
 			};
 		}
 	}

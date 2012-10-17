@@ -23,21 +23,21 @@ namespace MVC.Infrastructure
 		/** Return a view with only a model */
 		protected nView View (object model)
 		{
-			var rtn = _factory.View(model, _context);
+			var rtn = _factory.View(nViewType.MODEL_ONLY, model, _context);
 			return rtn;
 		}
 
 		/** Return a view to navigate to the given type */
 		protected nView View (Type target)
 		{
-			var rtn = _factory.View(target, _context);
+			var rtn = _factory.View(nViewType.ACTION_ONLY, target, _context);
 			return rtn;
 		}
 
 		/** Return a model and have a navigation result */
 		protected nView View (object model, Type target)
 		{
-			var rtn = _factory.View(model, target, _context);
+			var rtn = _factory.View(nViewType.MODEL_AND_ACTION, model, target, _context);
 			return rtn;
 		}
 

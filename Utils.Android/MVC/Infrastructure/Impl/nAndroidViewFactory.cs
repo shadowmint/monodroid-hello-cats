@@ -10,18 +10,16 @@ namespace MVC.Infrastructure.Impl
 		public nView View (params object[] values)
 		{
 			nView rtn = null;
-			if (values.Length == 2) {
-				if (values[0].GetType == typeof(Type)) {
-					rtn = new nAndroidView(null, (Type) values[0], (Context) values[1]);
-				}
-				else {
-					rtn = new nAndroidView(values[0], null, (Context) values[1]);
-				}
-			} else if (values.Length == 3) {
-				rtn = new nAndroidView(values[0], (Type) values[1], (Context) values[2]);
-			} else {
+			var value = (int) values[0];
+			var type = (nViewType) Enum.ToObject(typeof(nViewType), value);
+			if (type == nViewType.ACTION_ONLY) 
+				rtn = new nAndroidView(null, (Type) values[1], (Context) values[2]);
+			else if (type == nViewType.MODEL_ONLY)
+				rtn = new nAndroidView(values[1], null, (Context) values[2]);
+			else if (type == nViewType.MODEL_AND_ACTION)
+				rtn = new nAndroidView(values[1], (Type) values[2], (Context) values[3]);
+			 else 
 				throw new Exception("Invalid view params");
-			}
 			return rtn;
 		}
 	}

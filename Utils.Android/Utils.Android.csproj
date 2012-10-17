@@ -56,5 +56,6 @@
     <Compile Include="MVC\Infrastructure\Impl\nAndroidView.cs" />
     <Compile Include="MVC\Infrastructure\Impl\nAndroidDispatcher.cs" />
     <Compile Include="MVC\Infrastructure\Impl\nAndroidViewFactory.cs" />
+    <Compile Include="MVC\Infrastructure\nViewType.cs" />
   </ItemGroup>
 </Project>
