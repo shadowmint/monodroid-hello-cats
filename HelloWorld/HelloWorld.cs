@@ -13,22 +13,17 @@ using HelloWorld.Controllers;
 
 namespace HelloWorld
 {
-	[Activity (Label = "App", MainLauncher = true)]
-	public class App : Activity
+	[Activity (Label = "HelloWorld", MainLauncher = true)]
+	public class HelloWorld : Activity
 	{
-		public static AppSession Session = null;
+		public static HelloWorldApp App = new HelloWorldApp();
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-
-
-			/** Create global session instance */
-			var r = new Resolver();
-
-
-			Session.Controller<HomeController>().Index();
+			var target = HelloWorld.App.Controller<HomeController>(this.ApplicationContext).Index();
+			HelloWorld.App.Activiate(target);
 		}
 	}
 }

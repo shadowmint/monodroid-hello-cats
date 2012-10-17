@@ -14,11 +14,16 @@ namespace HelloWorld.Controllers
 {
 	public class HomeController : ControllerBase
 	{
-		public HomeController(ISession session, IDispatcher dispatcher) : base(session, dispatcher) {
+		public nView Index() {
+			return View(typeof(HelloView1));
 		}
 
-		public void Index() {
-			Navigate<HomeController>(IndexActivity.ID, new IndexViewModel() { Value = "Hello World", Count = 0 });
+		public nView Hello() {
+			++_state.Count;
+			return View(new IndexViewModel() {
+				Count = _state.Count,
+				Value = "Hello"
+			});
 		}
 	}
 }

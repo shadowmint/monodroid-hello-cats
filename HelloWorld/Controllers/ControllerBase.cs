@@ -13,14 +13,11 @@ using HelloWorld.Model;
 
 namespace HelloWorld.Controllers
 {
-	public abstract class ControllerBase : Controller
+	public abstract class ControllerBase : nController
 	{
-		public ControllerBase(ISession session, IDispatcher dispatcher) : base(session, dispatcher) {
-		}
-
-		protected AppModel Model {
+		protected HelloWorldState _state {
 			get {
-				return (AppModel) Session.State;
+				return (HelloWorldState) _rawState;
 			}
 		}
 	}
