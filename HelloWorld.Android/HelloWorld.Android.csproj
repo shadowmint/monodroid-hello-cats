@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Lidgren.Network.Android">
+      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Debug\Lidgren.Network.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Android">
+      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Debug\MonoGame.Framework.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -54,6 +60,7 @@
     <Compile Include="App\HelloWorldApp.cs" />
     <Compile Include="App\HelloWorldStateFactory.cs" />
     <Compile Include="Views\Home\HelloView1.cs" />
+    <Compile Include="Model\Record.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

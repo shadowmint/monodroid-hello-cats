@@ -40,10 +40,11 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
+    <Reference Include="System.Data" />
+    <Reference Include="Mono.Data.Sqlite" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="MVC\Infrastructure\IOC\TinyIoC.cs" />
     <Compile Include="MVC\Infrastructure\nAction.cs" />
     <Compile Include="MVC\Infrastructure\nView.cs" />
     <Compile Include="MVC\Infrastructure\nResolver.cs" />
@@ -57,5 +58,11 @@
     <Compile Include="MVC\Infrastructure\Impl\nAndroidDispatcher.cs" />
     <Compile Include="MVC\Infrastructure\Impl\nAndroidViewFactory.cs" />
     <Compile Include="MVC\Infrastructure\nViewType.cs" />
+    <Compile Include="MVC\Infrastructure\nDb.cs" />
+    <Compile Include="MVC\Infrastructure\3rdparty\SqlMapper.cs" />
+    <Compile Include="MVC\Infrastructure\3rdparty\TinyIoC.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MVC\Infrastructure\3rdparty\" />
   </ItemGroup>
 </Project>

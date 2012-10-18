@@ -1,5 +1,5 @@
 using System;
-using MVC.Infrastructure.IOC;
+using MVC.Infrastructure.TinyIoC;
 
 namespace MVC.Infrastructure
 {
