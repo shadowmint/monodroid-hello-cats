@@ -61,6 +61,10 @@
     <Compile Include="n\Infrastructure\nDb.cs" />
     <Compile Include="n\Infrastructure\3rdparty\SqlMapper.cs" />
     <Compile Include="n\Infrastructure\3rdparty\TinyIoC.cs" />
+    <Compile Include="n\Infrastructure\nDbRecord.cs" />
+    <Compile Include="n\Infrastructure\nDbRecordErrors.cs" />
+    <Compile Include="n\Infrastructure\nDbRecordError.cs" />
+    <Compile Include="n\Infrastructure\nDbRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="n\Infrastructure\3rdparty\" />

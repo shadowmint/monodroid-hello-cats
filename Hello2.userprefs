@@ -1,27 +1,30 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Utils.Android/MVC/Infrastructure/Impl/nAndroidDispatcher.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld.Android/Controllers/HomeController.cs">
     <Files>
-      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidDispatcher.cs" Line="21" Column="1" />
-      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidView.cs" Line="18" Column="25" />
-      <File FileName="Utils.Android/MVC/Infrastructure/Impl/AndroidViewData.cs" Line="8" Column="1" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nView.cs" Line="6" Column="9" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nController.cs" Line="23" Column="40" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nApp.cs" Line="30" Column="4" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nResolver.cs" Line="9" Column="35" />
-      <File FileName="Utils.Android/MVC/Infrastructure/IView.cs" Line="12" Column="1" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nDispatcher.cs" Line="9" Column="3" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nAction.cs" Line="10" Column="38" />
-      <File FileName="Utils.Android/MVC/Infrastructure/IDispatcher (copy).cs" Line="1" Column="1" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nStateFactory.cs" Line="3" Column="28" />
-      <File FileName="Utils.Android/MVC/Infrastructure/nViewFactory.cs" Line="9" Column="21" />
-      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidBindings.cs" Line="13" Column="3" />
-      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidViewFactory.cs" Line="25" Column="2" />
+      <File FileName="HelloWorld.Android/Views/Home/NotesView.cs" Line="25" Column="1" />
+      <File FileName="HelloWorld.Android/Controllers/HomeController.cs" Line="27" Column="41" />
+      <File FileName="HelloWorld.Android/ViewModels/Home/NotesViewModel.cs" Line="15" Column="12" />
+      <File FileName="HelloWorld.Android/ViewModels/Home/NoteViewModel.cs" Line="14" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HelloWorld.Common" selected="True" />
+          <Node name="HelloWorld.Android" expanded="True">
+            <Node name="Controllers" expanded="True">
+              <Node name="HomeController.cs" selected="True" />
+            </Node>
+            <Node name="Properties" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
+            <Node name="ViewModels" expanded="True">
+              <Node name="Home" expanded="True" />
+            </Node>
+            <Node name="Views" expanded="True">
+              <Node name="Home" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">

@@ -62,6 +62,10 @@
     <Compile Include="Views\Home\HelloView1.cs" />
     <Compile Include="Model\Record.cs" />
     <Compile Include="Views\Home\NotesView.cs" />
+    <Compile Include="ViewModels\Home\NotesViewModel.cs" />
+    <Compile Include="ViewModels\Home\NoteViewModel.cs" />
+    <Compile Include="Model\Repo\Note.cs" />
+    <Compile Include="Model\Repo\NoteRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -83,6 +87,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="ViewModels\Home\" />
     <Folder Include="App\" />
+    <Folder Include="Model\Repo\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Utils.Android\Utils.Android.csproj">

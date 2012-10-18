@@ -9,6 +9,7 @@ using Android.OS;
 using n.Infrastructure;
 using HelloWorld.ViewModels.Home;
 using HelloWorld.Views.Home;
+using System.Collections.Generic;
 
 namespace HelloWorld.Controllers
 {
@@ -16,6 +17,14 @@ namespace HelloWorld.Controllers
 	{
 		public nView Index() {
 			return View(typeof(HelloView1));
+		}
+
+		public nView Notes() {
+			return View (typeof(NotesView));
+		}
+
+		public nView AllNotes() {
+			return View (new NotesViewModel() { Notes = new List<NoteViewModel>() });
 		}
 
 		public nView Hello() {
