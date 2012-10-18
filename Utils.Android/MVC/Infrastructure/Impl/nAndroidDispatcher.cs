@@ -2,6 +2,7 @@ using System;
 using MVC.Infrastructure;
 using System.Collections.Generic;
 using Android.Content;
+using Android.App;
 
 namespace MVC.Infrastructure.Impl
 {
@@ -9,7 +10,7 @@ namespace MVC.Infrastructure.Impl
 	{
 		public void Dispatch (nView view)
 		{
-			Context context = (Context) view.Action.Params[nAndroidView.CONTEXT];
+			Activity context = (Activity) view.Action.Params[nAndroidView.CONTEXT];
 			Type target = (Type) view.Action.Params[nAndroidView.TARGET];
 			var intent = new Intent(context, target);
 			context.StartActivity(intent);

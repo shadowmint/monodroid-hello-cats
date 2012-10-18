@@ -1,54 +1,73 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hello2Tests/MVC/Mocks/MockViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Utils.Android/MVC/Infrastructure/Impl/nAndroidView.cs">
     <Files>
-      <File FileName="Hello2Tests/MVC/Mocks/IMockService.cs" Line="4" Column="9" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockService.cs" Line="4" Column="22" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockController.cs" Line="42" Column="56" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockApp.cs" Line="13" Column="5" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockAppSetup.cs" Line="22" Column="1" />
       <File FileName="Utils.Raw/Infrastructure/MVC/AppControlFactory.cs" Line="11" Column="40" />
-      <File FileName="Hello2Tests/Test.cs" Line="7" Column="3" />
       <File FileName="Utils.Raw/Infrastructure/MVC/IController.cs" Line="12" Column="2" />
-      <File FileName="Hello2Tests/MVC/MvcTests.cs" Line="15" Column="3" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockView1.cs" Line="19" Column="86" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockView2.cs" Line="29" Column="1" />
       <File FileName="Utils.Raw/Infrastructure/MVC/ActionResult.cs" Line="13" Column="14" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockViewModel.cs" Line="9" Column="35" />
       <File FileName="Utils.Raw/Infrastructure/MVC/AppControl.cs" Line="56" Column="33" />
       <File FileName="Utils.Raw/Infrastructure/MVC/Route.cs" Line="11" Column="47" />
       <File FileName="Utils.Raw/Infrastructure/Impl/TestDispatcher.cs" Line="15" Column="3" />
       <File FileName="Utils.Raw/Infrastructure/MVC/IAppSetup.cs" Line="6" Column="2" />
-      <File FileName="Hello2Tests/MVC/Mocks/MockContext.cs" Line="12" Column="1" />
+      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidDispatcher.cs" Line="14" Column="25" />
+      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidView.cs" Line="18" Column="25" />
+      <File FileName="HelloWorld/Views/Home/IndexActivity.cs" Line="15" Column="17" />
+      <File FileName="HelloWorld/HelloWorld.cs" Line="25" Column="81" />
+      <File FileName="HelloWorld/Controllers/HomeController.cs" Line="22" Column="19" />
+      <File FileName="HelloWorld/ViewModels/Home/IndexViewModel.cs" Line="15" Column="3" />
+      <File FileName="HelloWorld/Model/AppSession.cs" Line="6" Column="35" />
+      <File FileName="HelloWorld/Controllers/ControllerBase.cs" Line="18" Column="3" />
+      <File FileName="Utils.Android/MVC/Infrastructure/Impl/AndroidViewData.cs" Line="8" Column="2" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nView.cs" Line="6" Column="9" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nController.cs" Line="23" Column="40" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nApp.cs" Line="30" Column="4" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nResolver.cs" Line="9" Column="35" />
+      <File FileName="Utils.Android/MVC/Infrastructure/IView.cs" Line="12" Column="1" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nDispatcher.cs" Line="9" Column="3" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nAction.cs" Line="10" Column="38" />
+      <File FileName="Utils.Android/MVC/Infrastructure/IDispatcher (copy).cs" Line="1" Column="1" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nStateFactory.cs" Line="3" Column="29" />
+      <File FileName="Utils.Android/MVC/Infrastructure/nViewFactory.cs" Line="9" Column="21" />
+      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidBindings.cs" Line="13" Column="3" />
+      <File FileName="Utils.Android/MVC/Infrastructure/Impl/nAndroidViewFactory.cs" Line="25" Column="14" />
+      <File FileName="HelloWorld/Views/Home/HelloView1.cs" Line="38" Column="1" />
+      <File FileName="HelloWorld/Model/HelloWorldState.cs" Line="8" Column="14" />
+      <File FileName="HelloWorld/App/HelloWorldApp.cs" Line="9" Column="11" />
+      <File FileName="HelloWorld/App/HelloWorldStateFactory.cs" Line="11" Column="16" />
+      <File FileName="dfdf/Activity1.cs" Line="21" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Hello2Tests" expanded="True" />
-          <Node name="Utils.Raw" expanded="True">
+        <State expanded="True" selected="True">
+          <Node name="dfdf" expanded="True" />
+          <Node name="HelloWorld" expanded="True">
+            <Node name="App" expanded="True" />
+            <Node name="Controllers" expanded="True" />
+            <Node name="Model" expanded="True" />
+            <Node name="ViewModels" expanded="True">
+              <Node name="Home" expanded="True" />
+            </Node>
+            <Node name="Views" expanded="True">
+              <Node name="Home" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="Utils.Android" expanded="True">
             <Node name="MVC" expanded="True">
               <Node name="Infrastructure" expanded="True">
                 <Node name="Impl" expanded="True" />
-                <Node name="IOC" expanded="True" />
-                <Node name="IView.cs" selected="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
-        <State expanded="True">
-          <Node name="Hello2Tests" selected="True" />
-        </State>
+        <State expanded="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
       </Pad>
       <Pad Id="ConnectionManagerPad">
         <State selected="True" />
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

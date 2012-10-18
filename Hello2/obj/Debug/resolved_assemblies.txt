@@ -1,2 +1,0 @@
-/Users/douglasl/projects/Hello2/Hello2/bin/Debug/Hello2.dll
-/Users/douglasl/projects/Hello2/Hello2/bin/Debug/Utils.dll

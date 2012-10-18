@@ -24,7 +24,7 @@ namespace HelloWorld.Views.Home
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.Main);
-			_state = (IndexViewModel) HelloWorld.App.Controller<HomeController>(ApplicationContext).Hello().Model;
+			_state = (IndexViewModel) HelloWorld.App.Controller<HomeController>(this).Hello().Model;
 
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			button.Click += delegate {

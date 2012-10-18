@@ -22,7 +22,7 @@ namespace HelloWorld
 		{
 			base.OnCreate (bundle);
 
-			var target = HelloWorld.App.Controller<HomeController>(this.ApplicationContext).Index();
+			var target = HelloWorld.App.Controller<HomeController>(this).Index();
 			HelloWorld.App.Activiate(target);
 		}
 	}

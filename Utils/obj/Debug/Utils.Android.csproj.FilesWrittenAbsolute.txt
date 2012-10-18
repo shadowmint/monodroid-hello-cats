@@ -1,9 +1,0 @@
-/Users/douglasl/projects/Hello2/Utils/bin/Debug/Utils.dll.mdb
-/Users/douglasl/projects/Hello2/Utils/bin/Debug/Utils.dll
-/Users/douglasl/projects/Hello2/Utils/bin/Debug/Utils.Utils.apk
-/Users/douglasl/projects/Hello2/Utils/obj/Debug/android/bin/Utils.Utils.apk
-/Users/douglasl/projects/Hello2/Utils/obj/Debug/R.cs.flag
-/Users/douglasl/projects/Hello2/Utils/bin/Debug/Utils.Utils-Signed.apk
-/Users/douglasl/projects/Hello2/Utils/obj/Debug/uploadflags.txt
-/Users/douglasl/projects/Hello2/Utils/obj/Debug/Utils.dll
-/Users/douglasl/projects/Hello2/Utils/obj/Debug/Utils.dll.mdb
