@@ -1,5 +1,5 @@
 using System;
-using MVC.Infrastructure;
+using n.Infrastructure;
 
 namespace HelloWorld.Model
 {

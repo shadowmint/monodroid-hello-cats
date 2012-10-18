@@ -57,7 +57,7 @@
 #endif
 
 #endregion
-namespace MVC.Infrastructure.TinyIoC
+namespace n.Infrastructure.TinyIoC
 {
 	using System;
 	using System.Collections.Generic;

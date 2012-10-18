@@ -1,6 +1,6 @@
 using System;
-using MVC.Infrastructure;
-using MVC.Infrastructure.Impl;
+using n.Infrastructure;
+using n.Infrastructure.Impl;
 
 namespace HelloWorld
 {

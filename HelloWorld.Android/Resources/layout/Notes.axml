@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:d1p1="http://schemas.android.com/apk/res/android"
+    d1p1:orientation="vertical"
+    d1p1:minWidth="25px"
+    d1p1:minHeight="25px"
+    d1p1:layout_width="fill_parent"
+    d1p1:layout_height="fill_parent"
+    d1p1:id="@+id/linearLayout1"
+    d1p1:padding="2mm">
+    <FrameLayout
+        d1p1:minWidth="25px"
+        d1p1:minHeight="25px"
+        d1p1:layout_width="fill_parent"
+        d1p1:layout_height="fill_parent"
+        d1p1:id="@+id/frameLayout1"
+        d1p1:layout_marginBottom="70.0dp">
+        <LinearLayout
+            d1p1:orientation="vertical"
+            d1p1:minWidth="25px"
+            d1p1:minHeight="25px"
+            d1p1:layout_width="fill_parent"
+            d1p1:layout_height="wrap_content"
+            d1p1:id="@+id/linearLayout2">
+            <LinearLayout
+                d1p1:orientation="horizontal"
+                d1p1:minWidth="25px"
+                d1p1:minHeight="25px"
+                d1p1:layout_width="fill_parent"
+                d1p1:layout_height="wrap_content"
+                d1p1:id="@+id/linearLayout3">
+                <TextView
+                    d1p1:text="Name"
+                    d1p1:textAppearance="?android:attr/textAppearanceMedium"
+                    d1p1:layout_width="wrap_content"
+                    d1p1:layout_height="fill_parent"
+                    d1p1:id="@+id/textView1"
+                    d1p1:layout_marginTop="1mm"
+                    d1p1:typeface="normal"
+                    d1p1:textSize="3mm" />
+                <EditText
+                    d1p1:layout_width="fill_parent"
+                    d1p1:layout_height="fill_parent"
+                    d1p1:id="@+id/editText1"
+                    d1p1:layout_marginLeft="1.5mm" />
+            </LinearLayout>
+            <LinearLayout
+                d1p1:orientation="horizontal"
+                d1p1:minWidth="25px"
+                d1p1:minHeight="25px"
+                d1p1:id="@+id/linearLayout4"
+                d1p1:layout_width="fill_parent"
+                d1p1:layout_height="wrap_content">
+                <TextView
+                    d1p1:text="Value"
+                    d1p1:textAppearance="?android:attr/textAppearanceMedium"
+                    d1p1:layout_width="wrap_content"
+                    d1p1:layout_height="fill_parent"
+                    d1p1:id="@+id/textView2"
+                    d1p1:layout_marginTop="1mm"
+                    d1p1:textSize="3mm"
+                    d1p1:typeface="normal" />
+                <EditText
+                    d1p1:layout_width="fill_parent"
+                    d1p1:layout_height="fill_parent"
+                    d1p1:id="@+id/editText2"
+                    d1p1:layout_marginLeft="1.5mm" />
+            </LinearLayout>
+            <Button
+                d1p1:text="Add value"
+                d1p1:id="@+id/button1"
+                d1p1:layout_width="fill_parent"
+                d1p1:layout_height="wrap_content" />
+            <ListView
+                d1p1:minWidth="25px"
+                d1p1:minHeight="25px"
+                d1p1:id="@+id/listView1"
+                d1p1:layout_width="fill_parent"
+                d1p1:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

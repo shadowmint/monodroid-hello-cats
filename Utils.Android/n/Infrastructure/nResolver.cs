@@ -1,7 +1,7 @@
 using System;
-using MVC.Infrastructure.TinyIoC;
+using n.Infrastructure.TinyIoC;
 
-namespace MVC.Infrastructure
+namespace n.Infrastructure
 {
 	/** Wrapper around the IOC so we can swap the implementation out easily */
 	public class nResolver

@@ -1,6 +1,6 @@
 using System;
 
-namespace MVC.Infrastructure
+namespace n.Infrastructure
 {
 	/** Return a global instance of the application state */
 	public interface nStateFactory

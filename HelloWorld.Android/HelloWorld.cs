@@ -6,8 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using MVC.Infrastructure;
-using MVC.Infrastructure.Impl;
+using n.Infrastructure;
+using n.Infrastructure.Impl;
 using HelloWorld.Model;
 using HelloWorld.Controllers;
 

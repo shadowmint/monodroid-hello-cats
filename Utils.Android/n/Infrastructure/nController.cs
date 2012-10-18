@@ -1,6 +1,6 @@
 using System;
 
-namespace MVC.Infrastructure
+namespace n.Infrastructure
 {
 	/** Extend this class for application controllers */
 	public abstract class nController

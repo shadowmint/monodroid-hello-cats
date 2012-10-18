@@ -1,10 +1,10 @@
 using System;
-using MVC.Infrastructure;
+using n.Infrastructure;
 using Android.App;
 using Android.Content;
 using System.Collections.Generic;
 
-namespace MVC.Infrastructure.Impl
+namespace n.Infrastructure.Impl
 {
 	public class nAndroidView : nView
 	{

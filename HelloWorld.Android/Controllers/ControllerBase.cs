@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using MVC.Infrastructure;
+using n.Infrastructure;
 using HelloWorld.ViewModels.Home;
 using HelloWorld.Views.Home;
 using HelloWorld.Model;

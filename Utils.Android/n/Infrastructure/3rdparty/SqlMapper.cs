@@ -18,7 +18,7 @@ using System.Threading;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 
-namespace MVC.Infrastructure.Dapper
+namespace n.Infrastructure.Dapper
 {
     /// <summary>
     /// Dapper, a light weight object mapper for ADO.NET

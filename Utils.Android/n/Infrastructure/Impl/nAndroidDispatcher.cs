@@ -1,10 +1,10 @@
 using System;
-using MVC.Infrastructure;
+using n.Infrastructure;
 using System.Collections.Generic;
 using Android.Content;
 using Android.App;
 
-namespace MVC.Infrastructure.Impl
+namespace n.Infrastructure.Impl
 {
 	public class nAndroidDispatcher : nDispatcher
 	{

@@ -1,9 +1,9 @@
 using System;
-using MVC.Infrastructure;
+using n.Infrastructure;
 using Android.App;
 using Android.Content;
 
-namespace MVC.Infrastructure.Impl
+namespace n.Infrastructure.Impl
 {
 	public class nAndroidViewFactory : nViewFactory
 	{

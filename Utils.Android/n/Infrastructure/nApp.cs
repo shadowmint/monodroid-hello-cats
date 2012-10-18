@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MVC.Infrastructure
+namespace n.Infrastructure
 {
 
 	/** The target application needs to implement and create an instance of this to use. */

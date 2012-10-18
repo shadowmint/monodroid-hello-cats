@@ -1,9 +1,9 @@
 using System;
-using MVC.Infrastructure;
+using n.Infrastructure;
 using System.Collections.Generic;
 using Android.Content;
 
-namespace MVC.Infrastructure.Impl
+namespace n.Infrastructure.Impl
 {
 	public class nAndroidBindings
 	{

@@ -14,8 +14,8 @@ using HelloWorld.ViewModels.Home;
 
 namespace HelloWorld.Views.Home
 {
-	[Activity (Label = "HelloWorld.Views.Home.HelloView1")]
-	public class HelloView1 : Activity
+	[Activity (Label = "HelloWorld.Views.Home.NotesView")]
+	public class NotesView : Activity
 	{
 		private IndexViewModel _state;
 
@@ -23,7 +23,7 @@ namespace HelloWorld.Views.Home
 		{
 			base.OnCreate (bundle);
 
-			SetContentView (Resource.Layout.Main);
+			SetContentView (Resource.Layout.Notes);
 			_state = (IndexViewModel) HelloWorld.App.Controller<HomeController>(this).Hello().Model;
 
 			Button button = FindViewById<Button> (Resource.Id.myButton);

@@ -61,6 +61,7 @@
     <Compile Include="App\HelloWorldStateFactory.cs" />
     <Compile Include="Views\Home\HelloView1.cs" />
     <Compile Include="Model\Record.cs" />
+    <Compile Include="Views\Home\NotesView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -70,6 +71,8 @@
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\layout\Notes.axml" />
+    <AndroidResource Include="Resources\layout\Note.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -1,6 +1,6 @@
 using System;
 
-namespace MVC.Infrastructure
+namespace n.Infrastructure
 {
 	/** Helper for build types */
 	public enum nViewType {
