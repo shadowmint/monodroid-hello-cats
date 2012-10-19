@@ -9,6 +9,7 @@ using Android.OS;
 using System.Collections.Generic;
 using n.Infrastructure;
 using n.Infrastructure.Dapper;
+using System.Linq;
 
 namespace HelloWorld.Models.Repo
 {
@@ -18,15 +19,20 @@ namespace HelloWorld.Models.Repo
 
 		public const string ID = "Id";
 
-		public const string CREATE_TABLE = "";
+		public const string CREATE_TABLE = "CREATE IF NOT EXISTS TABLE hwNote ()";
 
 		public NoteRepo (nDb db) : base(db)
 		{
 		}
 
+		protected override bool Setup() {
+			_db.Connection.Execute(CREATE_TABLE);
+			return true;
+		}
+
 		public int Count() 
 		{
-			return 0;
+			return Count(TABLE);
 		}
 
 		public IEnumerable<Note> Query (string sql, object bindings)
@@ -39,7 +45,7 @@ namespace HelloWorld.Models.Repo
 		}
 
 		public Note Create (string name, string value) {
-			var rtn = new Note(_db);
+			var rtn = new Note(this);
 			rtn.Name = name;
 			rtn.Value = value;
 			rtn.Save();
@@ -48,6 +54,34 @@ namespace HelloWorld.Models.Repo
 
 		public Note Get(int id) {
 			return Get<Note>(TABLE, ID, id);
+		}
+
+		public override bool Save(object instance)
+		{
+			var item = (Note) instance;
+			var rtn = false;
+			try {
+				var query = string.Format ("INSERT INTO {0} (Name, Value) VALUE (@Name, @Value); SELECT last_insert_rowid()", NoteRepo.TABLE, item.Name, item.Value);
+				item.Id = _db.Connection.Query<int> (query, new { Name = item.Name, Value = item.Value }).Single();
+				rtn = true;
+			} catch (Exception e) {
+				item.Errors.Add("", "Unable to save record", e);
+			}
+			return rtn;
+		}
+		
+		public override bool Delete(object instance)
+		{
+			var item = (Note) instance;
+			var rtn = false;
+			try {
+				var query = string.Format ("DELETE FROM {0} WHERE Id = @Id", NoteRepo.TABLE);
+				_db.Connection.Execute (query, new { Id = item.Id });
+				rtn = true;
+			} catch (Exception e) {
+				item.Errors.Add("", "Unable to delete record", e);
+			}
+			return rtn;
 		}
 	}
 }

@@ -21,7 +21,7 @@ namespace HelloWorld.Models.Repo
 
 		public string Value { get; set; }
 
-		public Note(nDb db) : base(db) {
+		public Note(nDbRepo repo) : base(repo) {
 		}
 
 		public override bool Validate ()
@@ -29,32 +29,6 @@ namespace HelloWorld.Models.Repo
 			if ((Name == null) || (Name == "")) Errors.Add("Name", "Invalid name: must not be empty or null");
 			if ((Value == null) || (Value == "")) Errors.Add("Value", "Invalid name: must not be empty or null");
 			return !Errors.Any;
-		}
-
-		protected override bool SaveRecord ()
-		{
-			var rtn = false;
-			try {
-				var query = string.Format ("INSERT INTO {0} (Name, Value) VALUE (@Name, @Value); SELECT last_insert_rowid()", NoteRepo.TABLE, Name, Value);
-				Id = _db.Query<int> (query, new { Name = Name, Value = Value }).Single();
-				rtn = true;
-			} catch (Exception e) {
-				Errors.Add("", "Unable to save record", e);
-			}
-			return rtn;
-		}
-		
-		protected override bool DeleteRecord ()
-		{
-			var rtn = false;
-			try {
-				var query = string.Format ("DELETE FROM {0} WHERE Id = @Id", NoteRepo.TABLE);
-				_db.Execute (query, new { Id = Id });
-				rtn = true;
-			} catch (Exception e) {
-				Errors.Add("", "Unable to delete record", e);
-			}
-			return rtn;
 		}
 	}
 }

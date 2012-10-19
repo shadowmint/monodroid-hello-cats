@@ -13,6 +13,7 @@ namespace n.Infrastructure
 		public nDbRepo (nDb connectionFactory)
 		{
 			_db = connectionFactory;
+			Setup();
 		}
 
 		protected IEnumerable<T> Query<T>(string query, object bindings)
@@ -33,6 +34,22 @@ namespace n.Infrastructure
 			var rtn = _db.Connection.Query<T>(query, new { Id = id });
 			return rtn.FirstOrDefault();
 		}
+
+		/** Return a count of records */
+		protected int Count(string table) {
+			var query = string.Format (@"SELECT COUNT(*) FROM {0}", table);
+			var rtn = _db.Connection.Query<int>(query).Single();
+			return rtn;
+		}
+
+		/** Should be implemented to save instances of the given type */
+		public abstract bool Save(object instance);
+
+		/** Should be implemented to delete instances of the given type */
+		public abstract bool Delete(object instance);
+
+		/** Create the table if it does not exist */
+		protected abstract bool Setup();
 	}
 }
 

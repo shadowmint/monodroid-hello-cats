@@ -1,18 +1,28 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld.Android/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld.Android/Model/Repo/Note.cs">
     <Files>
       <File FileName="HelloWorld.Android/Views/Home/NotesView.cs" Line="25" Column="1" />
-      <File FileName="HelloWorld.Android/Controllers/HomeController.cs" Line="27" Column="41" />
+      <File FileName="HelloWorld.Android/Controllers/HomeController.cs" Line="27" Column="47" />
       <File FileName="HelloWorld.Android/ViewModels/Home/NotesViewModel.cs" Line="15" Column="12" />
       <File FileName="HelloWorld.Android/ViewModels/Home/NoteViewModel.cs" Line="14" Column="20" />
+      <File FileName="HelloWorld.Android/Model/Repo/Note.cs" Line="36" Column="19" />
+      <File FileName="Utils.Android/n/Infrastructure/nDbRecord.cs" Line="12" Column="37" />
+      <File FileName="Utils.Android/n/Infrastructure/nDb.cs" Line="9" Column="36" />
+      <File FileName="Utils.Android/n/Infrastructure/nDbRecordError.cs" Line="16" Column="66" />
+      <File FileName="Utils.Android/n/Infrastructure/nDbRecordErrors.cs" Line="38" Column="52" />
+      <File FileName="Utils.Android/n/Infrastructure/nDbRepo.cs" Line="20" Column="37" />
+      <File FileName="HelloWorld.Android/Model/Repo/NoteRepo.cs" Line="20" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="HelloWorld.Android" expanded="True">
-            <Node name="Controllers" expanded="True">
-              <Node name="HomeController.cs" selected="True" />
+            <Node name="Controllers" expanded="True" />
+            <Node name="Model" expanded="True">
+              <Node name="Repo" expanded="True">
+                <Node name="Note.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Properties" expanded="True" />
             <Node name="Resources" expanded="True">
@@ -23,6 +33,11 @@
             </Node>
             <Node name="Views" expanded="True">
               <Node name="Home" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="Utils.Android" expanded="True">
+            <Node name="n" expanded="True">
+              <Node name="Infrastructure" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -66,6 +66,7 @@
     <Compile Include="ViewModels\Home\NoteViewModel.cs" />
     <Compile Include="Model\Repo\Note.cs" />
     <Compile Include="Model\Repo\NoteRepo.cs" />
+    <Compile Include="Controllers\NotesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
