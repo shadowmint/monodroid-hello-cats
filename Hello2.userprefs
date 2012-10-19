@@ -1,28 +1,34 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld.Android/Model/Repo/Note.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld.Android/Controllers/NotesController.cs">
     <Files>
-      <File FileName="HelloWorld.Android/Views/Home/NotesView.cs" Line="25" Column="1" />
-      <File FileName="HelloWorld.Android/Controllers/HomeController.cs" Line="27" Column="47" />
-      <File FileName="HelloWorld.Android/ViewModels/Home/NotesViewModel.cs" Line="15" Column="12" />
-      <File FileName="HelloWorld.Android/ViewModels/Home/NoteViewModel.cs" Line="14" Column="20" />
-      <File FileName="HelloWorld.Android/Model/Repo/Note.cs" Line="36" Column="19" />
-      <File FileName="Utils.Android/n/Infrastructure/nDbRecord.cs" Line="12" Column="37" />
-      <File FileName="Utils.Android/n/Infrastructure/nDb.cs" Line="9" Column="36" />
+      <File FileName="HelloWorld.Android/Views/Home/NotesView.cs" Line="30" Column="28" />
+      <File FileName="HelloWorld.Android/Controllers/HomeController.cs" Line="23" Column="32" />
+      <File FileName="HelloWorld.Android/ViewModels/Home/NotesViewModel.cs" Line="20" Column="3" />
+      <File FileName="HelloWorld.Android/ViewModels/Home/NoteViewModel.cs" Line="18" Column="23" />
+      <File FileName="HelloWorld.Android/Model/Repo/Note.cs" Line="24" Column="3" />
+      <File FileName="Utils.Android/n/Infrastructure/nDbRecord.cs" Line="22" Column="3" />
+      <File FileName="Utils.Android/n/Infrastructure/nDb.cs" Line="9" Column="35" />
       <File FileName="Utils.Android/n/Infrastructure/nDbRecordError.cs" Line="16" Column="66" />
       <File FileName="Utils.Android/n/Infrastructure/nDbRecordErrors.cs" Line="38" Column="52" />
-      <File FileName="Utils.Android/n/Infrastructure/nDbRepo.cs" Line="20" Column="37" />
-      <File FileName="HelloWorld.Android/Model/Repo/NoteRepo.cs" Line="20" Column="3" />
+      <File FileName="Utils.Android/n/Infrastructure/nDbRepo.cs" Line="68" Column="12" />
+      <File FileName="HelloWorld.Android/Model/Repo/NoteRepo.cs" Line="48" Column="22" />
+      <File FileName="HelloWorld.Android/Controllers/NotesController.cs" Line="40" Column="10" />
+      <File FileName="HelloWorld.Android/ViewModels/Home/IndexViewModel.cs" Line="1" Column="1" />
+      <File FileName="HelloWorld.Android/Views/Home/HelloView1.cs" Line="40" Column="4" />
+      <File FileName="Utils.Android/n/Infrastructure/nView.cs" Line="11" Column="21" />
+      <File FileName="Utils.Android/n/Infrastructure/3rdparty/TinyIoC.cs" Line="3500" Column="1" />
+      <File FileName="Utils.Android/n/Infrastructure/Impl/nAndroidDb.cs" Line="7" Column="17" />
+      <File FileName="Utils.Android/n/Infrastructure/Impl/nAndroidBindings.cs" Line="11" Column="32" />
+      <File FileName="Utils.Android/n/Infrastructure/3rdparty/SqlMapper.cs" Line="1877" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HelloWorld.Android" expanded="True">
+          <Node name="HelloWorld.Android" expanded="True" selected="True">
             <Node name="Controllers" expanded="True" />
             <Node name="Model" expanded="True">
-              <Node name="Repo" expanded="True">
-                <Node name="Note.cs" selected="True" />
-              </Node>
+              <Node name="Repo" expanded="True" />
             </Node>
             <Node name="Properties" expanded="True" />
             <Node name="Resources" expanded="True">
@@ -37,7 +43,10 @@
           </Node>
           <Node name="Utils.Android" expanded="True">
             <Node name="n" expanded="True">
-              <Node name="Infrastructure" expanded="True" />
+              <Node name="Infrastructure" expanded="True">
+                <Node name="3rdparty" expanded="True" />
+                <Node name="Impl" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>

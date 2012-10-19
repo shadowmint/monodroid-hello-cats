@@ -21,9 +21,6 @@ namespace HelloWorld.Models.Repo
 
 		public string Value { get; set; }
 
-		public Note(nDbRepo repo) : base(repo) {
-		}
-
 		public override bool Validate ()
 		{
 			if ((Name == null) || (Name == "")) Errors.Add("Name", "Invalid name: must not be empty or null");

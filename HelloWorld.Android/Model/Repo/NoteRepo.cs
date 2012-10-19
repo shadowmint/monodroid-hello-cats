@@ -19,7 +19,7 @@ namespace HelloWorld.Models.Repo
 
 		public const string ID = "Id";
 
-		public const string CREATE_TABLE = "CREATE IF NOT EXISTS TABLE hwNote ()";
+		public const string CREATE_TABLE = "CREATE TABLE IF NOT EXISTS hwNote (Id INTEGER PRIMARY KEY, Name VARCHAR(50), Value VARCHAR(50))";
 
 		public NoteRepo (nDb db) : base(db)
 		{
@@ -45,10 +45,10 @@ namespace HelloWorld.Models.Repo
 		}
 
 		public Note Create (string name, string value) {
-			var rtn = new Note(this);
+			var rtn = new Note();
 			rtn.Name = name;
 			rtn.Value = value;
-			rtn.Save();
+			Save (rtn);
 			return rtn;
 		}
 
@@ -56,7 +56,7 @@ namespace HelloWorld.Models.Repo
 			return Get<Note>(TABLE, ID, id);
 		}
 
-		public override bool Save(object instance)
+		protected override bool SaveInstance(nDbRecord instance)
 		{
 			var item = (Note) instance;
 			var rtn = false;
@@ -70,7 +70,7 @@ namespace HelloWorld.Models.Repo
 			return rtn;
 		}
 		
-		public override bool Delete(object instance)
+		protected override bool DeleteInstance(nDbRecord instance)
 		{
 			var item = (Note) instance;
 			var rtn = false;

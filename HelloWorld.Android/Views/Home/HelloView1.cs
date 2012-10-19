@@ -17,6 +17,7 @@ namespace HelloWorld.Views.Home
 	[Activity (Label = "HelloWorld.Views.Home.HelloView1")]
 	public class HelloView1 : Activity
 	{
+		private HomeController _controller;
 		private IndexViewModel _state;
 
 		protected override void OnCreate (Bundle bundle)
@@ -24,11 +25,17 @@ namespace HelloWorld.Views.Home
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.Main);
-			_state = (IndexViewModel) HelloWorld.App.Controller<HomeController>(this).Hello().Model;
+			_controller = HelloWorld.App.Controller<HomeController>(this);
+			_state = _controller.Hello().AsType<IndexViewModel>();
 
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", _state.Count++);
+			};
+
+			button = FindViewById<Button> (Resource.Id.buttonToNotes);
+			button.Click += delegate {
+				HelloWorld.App.Activiate(_controller.Notes());
 			};
 		}
 	}

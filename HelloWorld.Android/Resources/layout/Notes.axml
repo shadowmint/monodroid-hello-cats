@@ -40,7 +40,7 @@
                 <EditText
                     d1p1:layout_width="fill_parent"
                     d1p1:layout_height="fill_parent"
-                    d1p1:id="@+id/editText1"
+                    d1p1:id="@+id/notesNoteName"
                     d1p1:layout_marginLeft="1.5mm" />
             </LinearLayout>
             <LinearLayout
@@ -62,12 +62,12 @@
                 <EditText
                     d1p1:layout_width="fill_parent"
                     d1p1:layout_height="fill_parent"
-                    d1p1:id="@+id/editText2"
+                    d1p1:id="@+id/notesNoteValue"
                     d1p1:layout_marginLeft="1.5mm" />
             </LinearLayout>
             <Button
                 d1p1:text="Add value"
-                d1p1:id="@+id/button1"
+                d1p1:id="@+id/notesAddButton"
                 d1p1:layout_width="fill_parent"
                 d1p1:layout_height="wrap_content" />
             <ListView

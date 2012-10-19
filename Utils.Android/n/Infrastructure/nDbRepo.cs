@@ -42,11 +42,30 @@ namespace n.Infrastructure
 			return rtn;
 		}
 
+		/** Save this record, performing an insert if required */
+		public bool Save(nDbRecord instance)
+		{
+			instance.Validate();
+			var success = instance.Valid;
+			if (success) success = SaveInstance(instance);
+			if (success) instance._persisted = true;
+			return success;
+		}
+
+		/** Delete this record, if it exists */
+		public bool Delete (nDbRecord instance)
+		{
+			var success = false;
+			if (instance._persisted) 
+				success = DeleteInstance(instance);
+			return success;
+		}
+
 		/** Should be implemented to save instances of the given type */
-		public abstract bool Save(object instance);
+		protected abstract bool SaveInstance(nDbRecord instance);
 
 		/** Should be implemented to delete instances of the given type */
-		public abstract bool Delete(object instance);
+		protected abstract bool DeleteInstance(nDbRecord instance);
 
 		/** Create the table if it does not exist */
 		protected abstract bool Setup();

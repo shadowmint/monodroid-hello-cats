@@ -8,6 +8,7 @@ namespace n.Infrastructure.Impl
 	public class nAndroidBindings
 	{
 		public static void Bind(nResolver resolver) {
+			resolver.Bind<nDb, nAndroidDb>();
 			resolver.Bind<nViewFactory, nAndroidViewFactory>();
 			resolver.Bind<nDispatcher, nAndroidDispatcher>();
 		}

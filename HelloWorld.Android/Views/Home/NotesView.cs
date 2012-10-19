@@ -17,18 +17,22 @@ namespace HelloWorld.Views.Home
 	[Activity (Label = "HelloWorld.Views.Home.NotesView")]
 	public class NotesView : Activity
 	{
-		private IndexViewModel _state;
+		private NotesViewModel _state;
+
+		private NotesController _controller;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.Notes);
-			_state = (IndexViewModel) HelloWorld.App.Controller<HomeController>(this).Hello().Model;
+			_controller = HelloWorld.App.Controller<NotesController>(this);
+			_state = _controller.All().AsType<NotesViewModel>();
 
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", _state.Count++);
+			Button add_button = FindViewById<Button> (Resource.Id.notesAddButton);
+			add_button.Click += delegate {
+				EditText nameText = FindViewById<EditText>(Resource.Id.notesNoteName);
+				nameText.Text = "Hello World";
 			};
 		}
 	}

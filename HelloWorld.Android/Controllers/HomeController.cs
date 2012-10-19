@@ -19,6 +19,10 @@ namespace HelloWorld.Controllers
 			return View(typeof(HelloView1));
 		}
 
+		public nView Notes() {
+			return View(typeof(NotesView));
+		}
+
 		public nView Hello() {
 			++_state.Count;
 			return View(new IndexViewModel() {

@@ -22,10 +22,6 @@ namespace HelloWorld.Controllers
 			_repo = repo;
 		}
 
-		public nView Index() {
-			return View(typeof(NotesView));
-		}
-
 		public nView All() {
 			var all = _repo.All(20, 0);
 			var model = new NotesViewModel(all);
@@ -41,7 +37,7 @@ namespace HelloWorld.Controllers
 
 		public nView Remove(int id) {
 			var item = _repo.Get(id);
-			item.Delete();
+			_repo.Delete(item);
 			return View (true);
 		}
 	}
