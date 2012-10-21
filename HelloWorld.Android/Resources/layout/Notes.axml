@@ -11,7 +11,7 @@
         d1p1:minWidth="25px"
         d1p1:minHeight="25px"
         d1p1:layout_width="fill_parent"
-        d1p1:layout_height="fill_parent"
+        d1p1:layout_height="wrap_content"
         d1p1:id="@+id/frameLayout1"
         d1p1:layout_marginBottom="70.0dp">
         <LinearLayout
@@ -73,7 +73,7 @@
             <ListView
                 d1p1:minWidth="25px"
                 d1p1:minHeight="25px"
-                d1p1:id="@+id/listView1"
+                d1p1:id="@+id/notesList"
                 d1p1:layout_width="fill_parent"
                 d1p1:layout_height="wrap_content" />
         </LinearLayout>

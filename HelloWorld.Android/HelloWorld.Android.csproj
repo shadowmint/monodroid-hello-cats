@@ -42,12 +42,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Lidgren.Network.Android">
-      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Debug\Lidgren.Network.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework.Android">
-      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Debug\MonoGame.Framework.Android.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />

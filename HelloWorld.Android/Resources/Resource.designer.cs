@@ -55,29 +55,35 @@ namespace HelloWorld
 			// aapt resource value: 0x7f050002
 			public const int linearLayout3 = 2131034114;
 			
-			// aapt resource value: 0x7f05000a
-			public const int linearLayout4 = 2131034122;
-			
-			// aapt resource value: 0x7f05000d
-			public const int listView1 = 2131034125;
+			// aapt resource value: 0x7f05000b
+			public const int linearLayout4 = 2131034123;
 			
 			// aapt resource value: 0x7f050000
 			public const int myButton = 2131034112;
 			
-			// aapt resource value: 0x7f05000c
-			public const int notesAddButton = 2131034124;
-			
-			// aapt resource value: 0x7f050009
-			public const int notesNoteName = 2131034121;
-			
-			// aapt resource value: 0x7f05000b
-			public const int notesNoteValue = 2131034123;
-			
 			// aapt resource value: 0x7f050005
-			public const int textView1 = 2131034117;
+			public const int noteListName = 2131034117;
 			
 			// aapt resource value: 0x7f050006
-			public const int textView2 = 2131034118;
+			public const int noteListValue = 2131034118;
+			
+			// aapt resource value: 0x7f05000e
+			public const int notesAddButton = 2131034126;
+			
+			// aapt resource value: 0x7f05000f
+			public const int notesList = 2131034127;
+			
+			// aapt resource value: 0x7f05000a
+			public const int notesNoteName = 2131034122;
+			
+			// aapt resource value: 0x7f05000d
+			public const int notesNoteValue = 2131034125;
+			
+			// aapt resource value: 0x7f050009
+			public const int textView1 = 2131034121;
+			
+			// aapt resource value: 0x7f05000c
+			public const int textView2 = 2131034124;
 			
 			private Id()
 			{

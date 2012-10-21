@@ -12,6 +12,10 @@ namespace HelloWorld.ViewModels.Home
 {
 	public class NoteViewModel 
 	{
+		public NoteViewModel()
+		{
+		}
+
 		public NoteViewModel(Note note) {
 			Id = note.Id;
 			Name = note.Name;
