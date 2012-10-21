@@ -22,7 +22,7 @@ namespace n.Infrastructure
 		/** If there are any errors */
 		public bool Valid { 
 			get {
-				return Errors.Any;
+				return !Errors.Any;
 			} 
 		}
 	}

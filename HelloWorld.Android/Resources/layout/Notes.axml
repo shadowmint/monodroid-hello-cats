@@ -21,6 +21,11 @@
             d1p1:layout_width="fill_parent"
             d1p1:layout_height="wrap_content"
             d1p1:id="@+id/linearLayout2">
+            <TextView
+                d1p1:text="-"
+                d1p1:layout_width="fill_parent"
+                d1p1:layout_height="wrap_content"
+                d1p1:id="@+id/notesInfo" />
             <LinearLayout
                 d1p1:orientation="horizontal"
                 d1p1:minWidth="25px"

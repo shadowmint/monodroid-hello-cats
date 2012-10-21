@@ -61,7 +61,7 @@ namespace HelloWorld.Models.Repo
 			var item = (Note) instance;
 			var rtn = false;
 			try {
-				var query = string.Format ("INSERT INTO {0} (Name, Value) VALUE (@Name, @Value); SELECT last_insert_rowid()", NoteRepo.TABLE, item.Name, item.Value);
+				var query = string.Format ("INSERT INTO {0} (Name, Value) VALUES (@Name, @Value); SELECT last_insert_rowid()", NoteRepo.TABLE, item.Name, item.Value);
 				item.Id = _db.Connection.Query<int> (query, new { Name = item.Name, Value = item.Value }).Single();
 				rtn = true;
 			} catch (Exception e) {

@@ -18,9 +18,9 @@ namespace HelloWorld.Views.Home
 	[Activity (Label = "HelloWorld.Views.Home.NotesView")]
 	public class NotesView : Activity
 	{
-		private NotesViewModel _state;
-
 		private NotesController _controller;
+
+		private NotesActions _actions; 
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -28,32 +28,45 @@ namespace HelloWorld.Views.Home
 
 			SetContentView (Resource.Layout.Notes);
 			_controller = HelloWorld.App.Controller<NotesController>(this);
-			_state = _controller.All().AsType<NotesViewModel>();
-			populateList();
+			_actions = new NotesActions(this, _controller);
+			_actions.populateList();
 
 			Button add_button = FindViewById<Button> (Resource.Id.notesAddButton);
 			add_button.Click += delegate {
 				var name = FindViewById<EditText>(Resource.Id.notesNoteName).Text;
 				var value = FindViewById<EditText>(Resource.Id.notesNoteValue).Text;
-				_controller.Add(name, value);
-				populateList();
+				var note = (NoteViewModel) _controller.Add(name, value).Model;
+				FindViewById<TextView>(Resource.Id.notesInfo).Text = note.Messages;
+				if (note.Valid)
+					_actions.populateList();
 			};
 		}
+	}
 
-		private void populateList() {
-			var list = FindViewById<ListView>(Resource.Id.notesList);
+	class NotesActions {
 
-			var dummy =  new List<NoteViewModel>() {
-				new NoteViewModel() { Id = 0, Name = "Hello", Value = "World" },
-				new NoteViewModel() { Id = 1, Name = "Hello2", Value = "World2" }
+		private NotesView _self;
+
+		public NotesController Controller;
+
+		public NotesActions(NotesView view, NotesController controller) {
+			_self = view;
+			Controller = controller;
+		}
+
+		public void populateList() {
+			var list = _self.FindViewById<ListView>(Resource.Id.notesList);
+			var notes = Controller.All().Model.As<NotesViewModel>();
+			list.Adapter = new NotesListAdapter(_self, Resource.Layout.Note, notes.Notes);
+			list.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs e) {
+				Controller.Remove((int) e.Id);
+				populateList();
 			};
-
-			list.Adapter = new NotesListAdapter(this, Resource.Layout.Note, dummy);
 		}
 	}
 
 	/** List builder */
-	public class NotesListAdapter : ArrayAdapter<NoteViewModel> {
+	class NotesListAdapter : ArrayAdapter<NoteViewModel> {
 
 		private LayoutInflater _inflator;
 

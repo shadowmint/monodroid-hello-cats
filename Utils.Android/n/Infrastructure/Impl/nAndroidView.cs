@@ -12,7 +12,7 @@ namespace n.Infrastructure.Impl
 
 		public const string CONTEXT = "CONTEXT";
 
-		public nAndroidView(object model, Type target, Context context) {
+		public nAndroidView(nModel model, Type target, Context context) {
 			Model = model;
 			Action = new nAction() {
 				Params = new Dictionary<string, object>() {

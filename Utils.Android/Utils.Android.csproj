@@ -66,6 +66,7 @@
     <Compile Include="n\Infrastructure\nDbRecordError.cs" />
     <Compile Include="n\Infrastructure\nDbRepo.cs" />
     <Compile Include="n\Infrastructure\Impl\nAndroidDb.cs" />
+    <Compile Include="n\Infrastructure\nModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="n\Infrastructure\3rdparty\" />
