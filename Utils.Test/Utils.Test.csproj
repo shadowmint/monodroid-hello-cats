@@ -91,11 +91,19 @@
     <Compile Include="n\Infrastructure\Impl\nTestView.cs" />
     <Compile Include="n\Infrastructure\Impl\nTestDispatcher.cs" />
     <Compile Include="n\Infrastructure\Impl\nTestDb.cs" />
+    <Compile Include="n\Infrastructure\Impl\nTestLogWriter.cs" />
+    <Compile Include="..\Utils.Android\n\Infrastructure\nLog.cs">
+      <Link>n\Infrastructure\nLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Utils.Android\n\Infrastructure\nLogWriter.cs">
+      <Link>n\Infrastructure\nLogWriter.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="n\" />
     <Folder Include="n\Infrastructure\" />
     <Folder Include="n\Infrastructure\Impl\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 </Project>

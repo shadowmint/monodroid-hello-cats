@@ -37,8 +37,8 @@ namespace n.Infrastructure
 
 		/** Return a count of records */
 		protected int Count(string table) {
-			var query = string.Format (@"SELECT COUNT(*) FROM {0}", table);
-			var rtn = _db.Connection.Query<int>(query).Single();
+			var query = string.Format (@"SELECT COUNT(*) As Count FROM {0}", table);
+			var rtn = (int) _db.Connection.Query<long>(query).Single();
 			return rtn;
 		}
 
@@ -48,16 +48,13 @@ namespace n.Infrastructure
 			instance.Validate();
 			var success = instance.Valid;
 			if (success) success = SaveInstance(instance);
-			if (success) instance._persisted = true;
 			return success;
 		}
 
 		/** Delete this record, if it exists */
 		public bool Delete (nDbRecord instance)
 		{
-			var success = false;
-			if (instance._persisted) 
-				success = DeleteInstance(instance);
+			var success = DeleteInstance(instance);
 			return success;
 		}
 

@@ -10,6 +10,7 @@ namespace n.Infrastructure.Impl
 			resolver.Bind<nDb, nTestDb>();
 			resolver.Bind<nViewFactory, nTestViewFactory>();
 			resolver.Bind<nDispatcher, nTestDispatcher>();
+			resolver.Bind<nLogWriter, nTestLogWriter>();
 		}
 	}
 }

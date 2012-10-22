@@ -67,6 +67,8 @@
     <Compile Include="n\Infrastructure\nDbRepo.cs" />
     <Compile Include="n\Infrastructure\Impl\nAndroidDb.cs" />
     <Compile Include="n\Infrastructure\nModel.cs" />
+    <Compile Include="n\Infrastructure\nLog.cs" />
+    <Compile Include="n\Infrastructure\nLogWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="n\Infrastructure\3rdparty\" />

@@ -29,13 +29,13 @@ namespace HelloWorld.Models.Repo
 			return Count(TABLE);
 		}
 
-		public IEnumerable<Note> Query (string sql, object bindings)
+		public IList<Note> Query (string sql, object bindings)
 		{
-			return Query<Note>(sql, bindings);
+			return new List<Note>(Query<Note>(sql, bindings));
 		}
 
-		public IEnumerable<Note> All(int limit, int offset) {
-			return All<Note>(TABLE, limit, offset);
+		public IList<Note> All(int limit, int offset) {
+			return new List<Note>(All<Note>(TABLE, limit, offset));
 		}
 
 		public Note Create (string name, string value) {
@@ -55,8 +55,8 @@ namespace HelloWorld.Models.Repo
 			var item = (Note) instance;
 			var rtn = false;
 			try {
-				var query = string.Format ("INSERT INTO {0} (Name, Value) VALUES (@Name, @Value); SELECT last_insert_rowid()", NoteRepo.TABLE, item.Name, item.Value);
-				item.Id = _db.Connection.Query<int> (query, new { Name = item.Name, Value = item.Value }).Single();
+				var query = string.Format ("INSERT INTO {0} (Name, Value) VALUES (@Name, @Value); SELECT last_insert_rowid() as Id", NoteRepo.TABLE, item.Name, item.Value);
+				item.Id = (int) _db.Connection.Query<long> (query, new { Name = item.Name, Value = item.Value }).Single();
 				rtn = true;
 			} catch (Exception e) {
 				item.Errors.Add("", "Unable to save record", e);
@@ -70,10 +70,12 @@ namespace HelloWorld.Models.Repo
 			var rtn = false;
 			try {
 				var query = string.Format ("DELETE FROM {0} WHERE Id = @Id", NoteRepo.TABLE);
+				nLog.Debug("Running delete SQL: " + query);
 				_db.Connection.Execute (query, new { Id = item.Id });
 				rtn = true;
 			} catch (Exception e) {
 				item.Errors.Add("", "Unable to delete record", e);
+				nLog.Error("Failed", e);
 			}
 			return rtn;
 		}
