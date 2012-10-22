@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C49FA2C-C61F-4569-A959-BB742E73F3A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HelloWorld.App.Test</RootNamespace>
+    <AssemblyName>HelloWorld.App.Test</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="..\HelloWorld.App.Android\Model\HelloWorldState.cs">
+      <Link>HelloWorld.App.Android\Model\HelloWorldState.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorld.App.Android\Model\Record.cs">
+      <Link>HelloWorld.App.Android\Model\Record.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorld.App.Android\Model\Repo\Note.cs">
+      <Link>HelloWorld.App.Android\Model\Repo\Note.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorld.App.Android\Model\Repo\NoteRepo.cs">
+      <Link>HelloWorld.App.Android\Model\Repo\NoteRepo.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorld.App.Android\ViewModels\Home\IndexViewModel.cs">
+      <Link>HelloWorld.App.Android\ViewModels\Home\IndexViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorld.App.Android\ViewModels\Home\NoteViewModel.cs">
+      <Link>HelloWorld.App.Android\ViewModels\Home\NoteViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorld.App.Android\ViewModels\Home\NotesViewModel.cs">
+      <Link>HelloWorld.App.Android\ViewModels\Home\NotesViewModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="HelloWorld.App.Android\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils.Test\Utils.Test.csproj">
+      <Project>{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}</Project>
+      <Name>Utils.Test</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

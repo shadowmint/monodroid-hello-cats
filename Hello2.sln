@@ -5,6 +5,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils.Android", "Utils.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Android", "HelloWorld.Android\HelloWorld.Android.csproj", "{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils.Test", "Utils.Test\Utils.Test.csproj", "{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HelloWorld.Tests", "HelloWorld.Tests\HelloWorld.Tests.vbproj", "{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.App.Android", "HelloWorld.App.Android\HelloWorld.App.Android.csproj", "{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.App.Test", "HelloWorld.App.Test\HelloWorld.App.Test.csproj", "{5C49FA2C-C61F-4569-A959-BB742E73F3A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +23,26 @@ Global
 		{1238A3F1-F517-4DE3-890B-131D16D21373}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1238A3F1-F517-4DE3-890B-131D16D21373}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1238A3F1-F517-4DE3-890B-131D16D21373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C49FA2C-C61F-4569-A959-BB742E73F3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C49FA2C-C61F-4569-A959-BB742E73F3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C49FA2C-C61F-4569-A959-BB742E73F3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C49FA2C-C61F-4569-A959-BB742E73F3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Utils.Android\Utils.Android.csproj
