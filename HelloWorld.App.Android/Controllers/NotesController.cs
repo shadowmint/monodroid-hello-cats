@@ -8,7 +8,6 @@ using Android.Widget;
 using Android.OS;
 using n.Infrastructure;
 using HelloWorld.ViewModels.Home;
-using HelloWorld.Views.Home;
 using System.Collections.Generic;
 using HelloWorld.Models.Repo;
 
@@ -16,6 +15,8 @@ namespace HelloWorld.Controllers
 {
 	public class NotesController : ControllerBase
 	{
+		public const string INDEX = "NOTES_VIEW_1";
+
 		private NoteRepo _repo;
 
 		public NotesController(NoteRepo repo) {

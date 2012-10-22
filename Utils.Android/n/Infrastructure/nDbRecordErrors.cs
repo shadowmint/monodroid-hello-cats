@@ -26,6 +26,17 @@ namespace n.Infrastructure
 			}
 		}
 
+		/** Generates a single summary message */
+		public string Summary {
+			get {
+				var summary = "";
+				foreach (var s in Messages) {
+					summary += s.ToString () + "\n";
+				}
+				return summary;
+			}
+		}
+
 		/** Add an error message */
 		public void Add(string type, string message)
 		{

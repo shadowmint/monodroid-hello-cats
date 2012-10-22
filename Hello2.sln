@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Android", "Hello
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils.Test", "Utils.Test\Utils.Test.csproj", "{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HelloWorld.Tests", "HelloWorld.Tests\HelloWorld.Tests.vbproj", "{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.App.Android", "HelloWorld.App.Android\HelloWorld.App.Android.csproj", "{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.App.Test", "HelloWorld.App.Test\HelloWorld.App.Test.csproj", "{5C49FA2C-C61F-4569-A959-BB742E73F3A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Tests", "HelloWorld.Tests\HelloWorld.Tests.csproj", "{D2727544-0F52-4DB9-ADDA-C78BD8CA4DAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,14 +27,14 @@ Global
 		{5C49FA2C-C61F-4569-A959-BB742E73F3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C49FA2C-C61F-4569-A959-BB742E73F3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C49FA2C-C61F-4569-A959-BB742E73F3A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF51D262-C5F6-4E88-82EA-DEA7F79755BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2727544-0F52-4DB9-ADDA-C78BD8CA4DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2727544-0F52-4DB9-ADDA-C78BD8CA4DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2727544-0F52-4DB9-ADDA-C78BD8CA4DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2727544-0F52-4DB9-ADDA-C78BD8CA4DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D70F4DBE-46DF-45BE-A69A-6FC0FABCB843}.Release|Any CPU.ActiveCfg = Release|Any CPU

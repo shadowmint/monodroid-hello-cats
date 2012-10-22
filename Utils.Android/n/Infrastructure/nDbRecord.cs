@@ -19,6 +19,8 @@ namespace n.Infrastructure
 		/** Set of errors associated with the object */
 		public nDbRecordErrors Errors = new nDbRecordErrors();
 
+
+
 		/** If there are any errors */
 		public bool Valid { 
 			get {

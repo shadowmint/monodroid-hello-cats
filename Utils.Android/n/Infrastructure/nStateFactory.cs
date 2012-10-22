@@ -7,6 +7,9 @@ namespace n.Infrastructure
 	{
 		/** Return the global application state */
 		object State { get; }
+
+		/** Return the type binding for a named view */
+		Type View(string id);
 	}
 }
 

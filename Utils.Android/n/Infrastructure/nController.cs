@@ -12,12 +12,12 @@ namespace n.Infrastructure
 		private nViewFactory _factory;
 
 		/** Raw copy of the global application state */
-		protected object _rawState;
+		protected nStateFactory _stateFactory;
 
 		public nController() {
 			var r = new nResolver();
 			_factory = r.Resolve<nViewFactory>();
-			_rawState = r.Resolve<nStateFactory>().State;
+			_stateFactory = r.Resolve<nStateFactory>();
 		}
 
 		/** Return a view with only a model */
@@ -28,16 +28,18 @@ namespace n.Infrastructure
 		}
 
 		/** Return a view to navigate to the given type */
-		protected nView View (Type target)
+		protected nView View (string target)
 		{
-			var rtn = _factory.View(nViewType.ACTION_ONLY, target, _context);
+			var t = _stateFactory.View(target);
+			var rtn = _factory.View(nViewType.ACTION_ONLY, t, _context);
 			return rtn;
 		}
 
 		/** Return a model and have a navigation result */
-		protected nView View (object model, Type target)
+		protected nView View (object model, string target)
 		{
-			var rtn = _factory.View(nViewType.MODEL_AND_ACTION, model, target, _context);
+			var t = _stateFactory.View(target);
+			var rtn = _factory.View(nViewType.MODEL_AND_ACTION, model, t, _context);
 			return rtn;
 		}
 

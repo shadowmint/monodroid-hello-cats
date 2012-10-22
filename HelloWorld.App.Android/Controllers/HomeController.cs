@@ -8,19 +8,20 @@ using Android.Widget;
 using Android.OS;
 using n.Infrastructure;
 using HelloWorld.ViewModels.Home;
-using HelloWorld.Views.Home;
 using System.Collections.Generic;
 
 namespace HelloWorld.Controllers
 {
 	public class HomeController : ControllerBase
 	{
+		public const string INDEX = "HELLO_VIEW_1";
+
 		public nView Index() {
-			return View(typeof(HelloView1));
+			return View(HomeController.INDEX);
 		}
 
 		public nView Notes() {
-			return View(typeof(NotesView));
+			return View(NotesController.INDEX);
 		}
 
 		public nView Hello() {

@@ -52,7 +52,11 @@
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
     <Compile Include="ViewModels\Home\NotesViewModel.cs" />
     <Compile Include="ViewModels\Home\NoteViewModel.cs" />
-    <Compile Include="Views\Home\HelloView1.cs" />
-    <Compile Include="Views\Home\NotesView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils.Android\Utils.Android.csproj">
+      <Project>{1238A3F1-F517-4DE3-890B-131D16D21373}</Project>
+      <Name>Utils.Android</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

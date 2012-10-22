@@ -5,26 +5,27 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{89583F22-4C13-4C4C-956E-6DACB6BC6CDD}</ProjectGuid>
+    <ProjectGuid>{D2727544-0F52-4DB9-ADDA-C78BD8CA4DAB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>HelloWorld.Tests</RootNamespace>
     <AssemblyName>HelloWorld.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
     <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <DefineTrace>False</DefineTrace>
-    <AdditionalParameters />
-    <DefineDebug>False</DefineDebug>
+    <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
-    <DefineTrace>False</DefineTrace>
-    <AdditionalParameters />
-    <DefineDebug>False</DefineDebug>
+    <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
@@ -34,10 +35,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.vb" />
+    <Compile Include="Test.cs" />
+    <Compile Include="Model\Repo\NoteRepoTests.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Model\Repo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloWorld.App.Test\HelloWorld.App.Test.csproj">
+      <Project>{5C49FA2C-C61F-4569-A959-BB742E73F3A4}</Project>
+      <Name>HelloWorld.App.Test</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utils.Test\Utils.Test.csproj">
       <Project>{FC34A8FB-9ECB-4ECC-A532-5BAFF381CF70}</Project>
       <Name>Utils.Test</Name>

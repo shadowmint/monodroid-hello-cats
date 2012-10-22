@@ -8,7 +8,6 @@ using Android.Widget;
 using Android.OS;
 using n.Infrastructure;
 using HelloWorld.ViewModels.Home;
-using HelloWorld.Views.Home;
 using HelloWorld.Model;
 
 namespace HelloWorld.Controllers
@@ -17,7 +16,7 @@ namespace HelloWorld.Controllers
 	{
 		protected HelloWorldState _state {
 			get {
-				return (HelloWorldState) _rawState;
+				return (HelloWorldState) _stateFactory.State;
 			}
 		}
 	}

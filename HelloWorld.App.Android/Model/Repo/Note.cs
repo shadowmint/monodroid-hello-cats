@@ -1,11 +1,5 @@
 using System;
 
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
 using System.Collections.Generic;
 using n.Infrastructure;
 using n.Infrastructure.Dapper;
@@ -20,6 +14,10 @@ namespace HelloWorld.Models.Repo
 		public string Name { get; set; }
 
 		public string Value { get; set; }
+
+		public Note() {
+			Id = -1;
+		}
 
 		public override bool Validate ()
 		{
