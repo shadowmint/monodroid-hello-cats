@@ -9,8 +9,13 @@
         android:layout_height="wrap_content"
         android:text="@string/hello" />
     <Button
-        android:text="Button"
+        android:text="Notes Test"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonToNotes" />
+    <Button
+        android:text="Cats Test"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/catsButton" />
 </LinearLayout>

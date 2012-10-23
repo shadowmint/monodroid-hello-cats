@@ -69,6 +69,7 @@
     <Compile Include="n\Infrastructure\nModel.cs" />
     <Compile Include="n\Infrastructure\nLog.cs" />
     <Compile Include="n\Infrastructure\nLogWriter.cs" />
+    <Compile Include="n\Infrastructure\Impl\nAndroidLogWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="n\Infrastructure\3rdparty\" />

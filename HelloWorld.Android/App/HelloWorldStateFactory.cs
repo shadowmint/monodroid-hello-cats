@@ -13,7 +13,8 @@ namespace HelloWorld
 
 		private IDictionary<string, Type> _viewMap = new Dictionary<string, Type>() {
 			{ HomeController.INDEX, typeof(HelloView1) },
-			{ NotesController.INDEX, typeof(NotesView) }
+			{ NotesController.INDEX, typeof(NotesView) },
+			{ HomeController.CATS, typeof(CatsView) }
 		};
 
 		public object State { 

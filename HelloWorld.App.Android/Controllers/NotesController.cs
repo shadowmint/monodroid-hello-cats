@@ -15,7 +15,7 @@ namespace HelloWorld.Controllers
 {
 	public class NotesController : ControllerBase
 	{
-		public const string INDEX = "NOTES_VIEW_1";
+		public const string INDEX = "notes.index";
 
 		private NoteRepo _repo;
 
@@ -37,9 +37,10 @@ namespace HelloWorld.Controllers
 		}
 
 		public nView Remove(int id) {
+			nLog.Debug("Removing item with id: " + id);
 			var item = _repo.Get(id);
 			_repo.Delete(item);
-			return View (true);
+			return View();
 		}
 	}
 }

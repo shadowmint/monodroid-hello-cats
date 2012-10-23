@@ -14,10 +14,15 @@ namespace HelloWorld.Controllers
 {
 	public class HomeController : ControllerBase
 	{
-		public const string INDEX = "HELLO_VIEW_1";
+		public const string INDEX = "home.index";
+		public const string CATS = "home.cats";
 
 		public nView Index() {
-			return View(HomeController.INDEX);
+			return View(INDEX);
+		}
+
+		public nView Cats() {
+			return View(CATS);
 		}
 
 		public nView Notes() {

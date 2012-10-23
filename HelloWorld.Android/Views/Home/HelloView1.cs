@@ -33,9 +33,14 @@ namespace HelloWorld.Views.Home
 				button.Text = string.Format ("{0} clicks!", _state.Count++);
 			};
 
-			button = FindViewById<Button> (Resource.Id.buttonToNotes);
-			button.Click += delegate {
+			var notes = FindViewById<Button> (Resource.Id.buttonToNotes);
+			notes.Click += delegate {
 				HelloWorld.App.Activiate(_controller.Notes());
+			};
+
+			var cats = FindViewById<Button> (Resource.Id.catsButton);
+			cats.Click += delegate {
+				HelloWorld.App.Activiate(_controller.Cats());
 			};
 		}
 	}

@@ -11,6 +11,7 @@ namespace n.Infrastructure.Impl
 			resolver.Bind<nDb, nAndroidDb>();
 			resolver.Bind<nViewFactory, nAndroidViewFactory>();
 			resolver.Bind<nDispatcher, nAndroidDispatcher>();
+			resolver.Bind<nLogWriter, nAndroidLogWriter>();
 		}
 	}
 }

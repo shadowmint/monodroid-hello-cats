@@ -12,6 +12,7 @@ using HelloWorld.Model;
 using HelloWorld.Controllers;
 using HelloWorld.ViewModels.Home;
 using System.Collections.Generic;
+using Android.Views.InputMethods;
 
 namespace HelloWorld.Views.Home
 {
@@ -33,13 +34,27 @@ namespace HelloWorld.Views.Home
 
 			Button add_button = FindViewById<Button> (Resource.Id.notesAddButton);
 			add_button.Click += delegate {
-				var name = FindViewById<EditText>(Resource.Id.notesNoteName).Text;
-				var value = FindViewById<EditText>(Resource.Id.notesNoteValue).Text;
-				var note = (NoteViewModel) _controller.Add(name, value).Model;
+
+				var name = FindViewById<EditText>(Resource.Id.notesNoteName);
+				var value = FindViewById<EditText>(Resource.Id.notesNoteValue);
+				var note = (NoteViewModel) _controller.Add(name.Text, value.Text).Model;
 				FindViewById<TextView>(Resource.Id.notesInfo).Text = note.Messages;
-				if (note.Valid)
+
+				if (note.Valid) {
 					_actions.populateList();
+
+					// Reset fields and hide keyboard on add
+					HideKeyboard();
+					name.Text = "";
+					value.Text = "";
+				}
 			};
+		}
+
+		private void HideKeyboard() {
+			var service = (InputMethodManager) GetSystemService(Context.InputMethodService);
+			var field = FindViewById<EditText>(Resource.Id.notesNoteName);
+			service.HideSoftInputFromWindow(field.WindowToken, 0);
 		}
 	}
 
@@ -57,11 +72,7 @@ namespace HelloWorld.Views.Home
 		public void populateList() {
 			var list = _self.FindViewById<ListView>(Resource.Id.notesList);
 			var notes = Controller.All().Model.As<NotesViewModel>();
-			list.Adapter = new NotesListAdapter(_self, Resource.Layout.Note, notes.Notes);
-			list.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs e) {
-				Controller.Remove((int) e.Id);
-				populateList();
-			};
+			list.Adapter = new NotesListAdapter(this, _self, Resource.Layout.Note, notes.Notes);
 		}
 	}
 
@@ -70,11 +81,14 @@ namespace HelloWorld.Views.Home
 
 		private LayoutInflater _inflator;
 
+		private NotesActions _actions;
+
 		private NoteViewModel[] _notes;
 
 		private int _resourceId;
 
-		public NotesListAdapter(Context ctx, int viewResourceId, IEnumerable<NoteViewModel> notes) : base(ctx, viewResourceId) {
+		public NotesListAdapter(NotesActions actions, Context ctx, int viewResourceId, IEnumerable<NoteViewModel> notes) : base(ctx, viewResourceId) {
+			_actions = actions;
 			_inflator = (LayoutInflater) ctx.GetSystemService(Context.LayoutInflaterService);
 			_notes = new List<NoteViewModel>(notes).ToArray();
 			_resourceId = viewResourceId;
@@ -96,6 +110,14 @@ namespace HelloWorld.Views.Home
 			convertView = _inflator.Inflate(_resourceId, null);
 			convertView.FindViewById<TextView>(Resource.Id.noteListName).Text = _notes[position].Name;
 			convertView.FindViewById<TextView>(Resource.Id.noteListValue).Text = _notes[position].Value;
+
+			var button = convertView.FindViewById<Button>(Resource.Id.noteListDel);
+			var pos = position;
+			button.Click += delegate(object sender, EventArgs e) {
+				_actions.Controller.Remove(_notes[pos].Id);
+				_actions.populateList();
+			};
+
 			return convertView;
 		}
 	}

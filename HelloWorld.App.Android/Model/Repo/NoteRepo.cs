@@ -64,8 +64,13 @@ namespace HelloWorld.Models.Repo
 			return rtn;
 		}
 		
-		protected override bool DeleteInstance(nDbRecord instance)
+		protected override bool DeleteInstance (nDbRecord instance)
 		{
+			if (instance == null) {
+				nLog.Debug("Invalid request to delete a NULL db record of type Note");
+				return false;
+			}
+
 			var item = (Note) instance;
 			var rtn = false;
 			try {

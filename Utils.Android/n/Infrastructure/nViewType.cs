@@ -6,7 +6,8 @@ namespace n.Infrastructure
 	public enum nViewType {
 		MODEL_ONLY,
 		ACTION_ONLY,
-		MODEL_AND_ACTION
+		MODEL_AND_ACTION,
+		NO_OP
 	}
 }
 

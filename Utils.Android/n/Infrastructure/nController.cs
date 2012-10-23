@@ -20,6 +20,12 @@ namespace n.Infrastructure
 			_stateFactory = r.Resolve<nStateFactory>();
 		}
 
+		/** Return a dummy view with no action */
+		protected nView View() {
+			var rtn = _factory.View (nViewType.NO_OP);
+			return rtn;
+		}
+
 		/** Return a view with only a model */
 		protected nView View (object model)
 		{

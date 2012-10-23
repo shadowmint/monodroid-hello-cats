@@ -12,7 +12,9 @@ namespace n.Infrastructure.Impl
 			nView rtn = null;
 			var value = (int) values[0];
 			var type = (nViewType) Enum.ToObject(typeof(nViewType), value);
-			if (type == nViewType.ACTION_ONLY) 
+			if (type == nViewType.NO_OP) 
+				rtn = new nAndroidView(null, null, null);
+			else if (type == nViewType.ACTION_ONLY) 
 				rtn = new nAndroidView(null, (Type) values[1], (Context) values[2]);
 			else if (type == nViewType.MODEL_ONLY)
 				rtn = new nAndroidView((nModel) values[1], null, (Context) values[2]);
