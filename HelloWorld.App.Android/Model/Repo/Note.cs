@@ -22,7 +22,7 @@ namespace HelloWorld.Models.Repo
 		public override bool Validate ()
 		{
 			if ((Name == null) || (Name == "")) Errors.Add("Name", "Invalid name: must not be empty or null");
-			if ((Value == null) || (Value == "")) Errors.Add("Value", "Invalid name: must not be empty or null");
+			if ((Value == null) || (Value == "")) Errors.Add("Value", "Invalid value: must not be empty or null");
 			return !Errors.Any;
 		}
 	}
