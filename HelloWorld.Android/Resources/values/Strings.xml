@@ -2,5 +2,5 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">HelloWorld</string>
-	<dimen name="custom_text_size">4mm</dimen>
+	<dimen name="custom_text_size">2mm</dimen>
 </resources>
