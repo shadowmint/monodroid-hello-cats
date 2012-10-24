@@ -20,7 +20,7 @@ namespace HelloWorld.Models.Repo
 		}
 
 		protected override bool Setup() {
-			_db.Connection.Execute(CREATE_TABLE);
+			_db.Connection.Execute(CREATE_TABLE, new {});
 			return true;
 		}
 

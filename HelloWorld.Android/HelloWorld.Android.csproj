@@ -64,6 +64,7 @@
     <AndroidResource Include="Resources\layout\Notes.axml" />
     <AndroidResource Include="Resources\layout\Note.axml" />
     <AndroidResource Include="Resources\drawable\Cat.jpeg" />
+    <AndroidResource Include="Resources\drawable\Bubble.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

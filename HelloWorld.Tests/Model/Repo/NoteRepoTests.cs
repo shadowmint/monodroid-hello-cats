@@ -41,7 +41,8 @@ namespace HelloWorld.Tests
 			var instance = setup();
 
 			var count = instance.Count();
-			var note = instance.Create ("Hello", "World");
+			instance.Create ("Hello", "World");
+
 			var new_count = instance.Count();
 			Assert.IsTrue(new_count == count + 1, "Unable to read count");
 
