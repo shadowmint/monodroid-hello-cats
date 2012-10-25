@@ -1,56 +1,39 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld.App.Android/Model/Repo/Note.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld.Android/Views/Home/CatsView.cs">
     <Files>
       <File FileName="Utils.Android/n/Infrastructure/nDbRecord.cs" Line="10" Column="3" />
       <File FileName="Utils.Android/n/Infrastructure/nDb.cs" Line="9" Column="35" />
-      <File FileName="Utils.Android/n/Infrastructure/nDbRecordError.cs" Line="16" Column="66" />
       <File FileName="Utils.Android/n/Infrastructure/nView.cs" Line="8" Column="3" />
       <File FileName="Utils.Android/n/Infrastructure/3rdparty/TinyIoC.cs" Line="3500" Column="1" />
       <File FileName="Utils.Android/n/Infrastructure/Impl/nAndroidDb.cs" Line="7" Column="16" />
       <File FileName="Utils.Android/n/Infrastructure/Impl/nAndroidBindings.cs" Line="11" Column="32" />
-      <File FileName="Utils.Android/n/Infrastructure/3rdparty/SqlMapper.cs" Line="851" Column="1" />
       <File FileName="Utils.Android/n/Infrastructure/nModel.cs" Line="7" Column="36" />
       <File FileName="Utils.Android/n/Infrastructure/Impl/nAndroidView.cs" Line="15" Column="29" />
       <File FileName="Utils.Android/n/Infrastructure/Impl/nAndroidViewFactory.cs" Line="21" Column="1" />
-      <File FileName="Utils.Android/n/Infrastructure/nDbRepo.cs" Line="57" Column="7" />
+      <File FileName="Utils.Android/n/Infrastructure/nDbRepo.cs" Line="42" Column="2" />
       <File FileName="Utils.Android/n/Infrastructure/IDispatcher (copy).cs" Line="1" Column="1" />
       <File FileName="Utils.Test/n/Infrastructure/Impl/nTestBindings.cs" Line="13" Column="43" />
       <File FileName="Utils.Test/n/Infrastructure/Impl/nTestDb.cs" Line="3" Column="33" />
       <File FileName="Utils.Test/n/Infrastructure/Impl/nTestViewFactory.cs" Line="18" Column="62" />
       <File FileName="Utils.Test/n/Infrastructure/Impl/nTestView.cs" Line="12" Column="5" />
       <File FileName="Utils.Test/n/Infrastructure/Impl/nTestDispatcher.cs" Line="11" Column="3" />
-      <File FileName="Utils.Android/n/Infrastructure/IView.cs" Line="8" Column="3" />
-      <File FileName="HelloWorld.App.Android/Model/Repo/NoteRepo.cs" Line="68" Column="3" />
-      <File FileName="HelloWorld.Tests/Model/Repo/NoteRepoTests.cs" Line="64" Column="1" />
+      <File FileName="HelloWorld.App.Android/Model/Repo/NoteRepo.cs" Line="23" Column="44" />
+      <File FileName="HelloWorld.Tests/Model/Repo/NoteRepoTests.cs" Line="45" Column="1" />
       <File FileName="Utils.Android/n/Infrastructure/nLog.cs" Line="19" Column="4" />
       <File FileName="Utils.Android/n/Infrastructure/nLogWriter.cs" Line="9" Column="21" />
       <File FileName="Utils.Test/n/Infrastructure/Impl/nTestLogWriter.cs" Line="18" Column="1" />
       <File FileName="HelloWorld.App.Android/Model/HelloWorldState.cs" Line="1" Column="1" />
       <File FileName="HelloWorld.App.Android/Model/Repo/Note.cs" Line="29" Column="1" />
+      <File FileName="HelloWorld.Android/Views/Home/CatsView.cs" Line="68" Column="64" />
+      <File FileName="HelloWorld.Android/Resources/AboutResources.txt" Line="1" Column="1" />
+      <File FileName="HelloWorld.Android/Resources/Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="HelloWorld.Android/Resources/values/Strings.xml" Line="5" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HelloWorld.Android" expanded="True" selected="True" />
-          <Node name="HelloWorld.App.Android" expanded="True">
-            <Node name="Model" expanded="True">
-              <Node name="Repo" expanded="True" />
-            </Node>
-          </Node>
-          <Node name="Utils.Android" expanded="True">
-            <Node name="n" expanded="True">
-              <Node name="Infrastructure" expanded="True">
-                <Node name="Impl" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-          <Node name="Utils.Test" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="n" expanded="True">
-              <Node name="Infrastructure" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="HelloWorld.Android" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -76,4 +59,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.HelloWorld.Android AndroidDeviceId-Debug="emulator-5554" />
 </Properties>
